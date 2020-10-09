@@ -1,0 +1,1070 @@
+﻿@page
+@model BHMapp.Pages.bhc.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Bhamc</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Bhamc.ID" />
+            <div class="form-group">
+                <label asp-for="Bhamc.QuestionnaireNo" class="control-label"></label>
+                <input asp-for="Bhamc.QuestionnaireNo" class="form-control" />
+                <span asp-validation-for="Bhamc.QuestionnaireNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.AntenatalCare" class="control-label"></label>
+                <input asp-for="Bhamc.AntenatalCare" class="form-control" />
+                <span asp-validation-for="Bhamc.AntenatalCare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.GestationalAge" class="control-label"></label>
+                <input asp-for="Bhamc.GestationalAge" class="form-control" />
+                <span asp-validation-for="Bhamc.GestationalAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.DateMenstruation" class="control-label"></label>
+                <input asp-for="Bhamc.DateMenstruation" class="form-control" />
+                <span asp-validation-for="Bhamc.DateMenstruation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.ExpectedDate" class="control-label"></label>
+                <input asp-for="Bhamc.ExpectedDate" class="form-control" />
+                <span asp-validation-for="Bhamc.ExpectedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.HospitalName" class="control-label"></label>
+                <input asp-for="Bhamc.HospitalName" class="form-control" />
+                <span asp-validation-for="Bhamc.HospitalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.PostNatalCare" class="control-label"></label>
+                <input asp-for="Bhamc.PostNatalCare" class="form-control" />
+                <span asp-validation-for="Bhamc.PostNatalCare" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.InterviewerName" class="control-label"></label>
+                <input asp-for="Bhamc.InterviewerName" class="form-control" />
+                <span asp-validation-for="Bhamc.InterviewerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.InterviewDate" class="control-label"></label>
+                <input asp-for="Bhamc.InterviewDate" class="form-control" />
+                <span asp-validation-for="Bhamc.InterviewDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q1" class="control-label"></label>
+                <input asp-for="Bhamc.Q1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q2" class="control-label"></label>
+                <input asp-for="Bhamc.Q2" class="form-control" />
+                <span asp-validation-for="Bhamc.Q2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q3" class="control-label"></label>
+                <select asp-for="Bhamc.Q3" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ3" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ3" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q4" class="control-label"></label>
+                <select asp-for="Bhamc.Q4" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ4" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ4" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q5" class="control-label"></label>
+                <select asp-for="Bhamc.Q5" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q5" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q6" class="control-label"></label>
+                <select asp-for="Bhamc.Q6" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q6" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q7" class="control-label"></label>
+                <input asp-for="Bhamc.Q7" class="form-control" />
+                <span asp-validation-for="Bhamc.Q7" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q8" class="control-label"></label>
+                <select asp-for="Bhamc.Q8" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q8" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q9" class="control-label"></label>
+                <select asp-for="Bhamc.Q9" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q9" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q10" class="control-label"></label>
+                <select asp-for="Bhamc.Q10" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ10" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ10" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ10" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q11" class="control-label"></label>
+                <input asp-for="Bhamc.Q11" class="form-control" />
+                <span asp-validation-for="Bhamc.Q11" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q12_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q12_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q12_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q12_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q12_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q12_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q12_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q12_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q12_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q12_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q12_6" /> @Html.DisplayNameFor(model => model.Bhamc.Q12_6)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q12_7" /> @Html.DisplayNameFor(model => model.Bhamc.Q12_7)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q13" class="control-label"></label>
+                <select asp-for="Bhamc.Q13" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q13" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ13" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ13" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ13" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q14" class="control-label"></label>
+                <input asp-for="Bhamc.Q14" class="form-control" />
+                <span asp-validation-for="Bhamc.Q14" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q15" class="control-label"></label>
+                <select asp-for="Bhamc.Q15" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q15" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ15" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ15" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ15" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q16" class="control-label"></label>
+                <select asp-for="Bhamc.Q16" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q16" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q17" class="control-label"></label>
+                <select asp-for="Bhamc.Q17" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q17" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q18" class="control-label"></label>
+                <select asp-for="Bhamc.Q18" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q18" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ18" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ18" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ18" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q19" class="control-label"></label>
+                <select asp-for="Bhamc.Q19" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q19" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q20" class="control-label"></label>
+                <select asp-for="Bhamc.Q20" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q20" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ20" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ20" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ20" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q21" class="control-label"></label>
+                <select asp-for="Bhamc.Q21" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q21" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q22_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q22_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q22_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q22_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q22_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q22_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q22_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q22_4)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ22_4" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ22_4" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ22_4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q23" class="control-label"></label>
+                <select asp-for="Bhamc.Q23" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q23" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q24" class="control-label"></label>
+                <input asp-for="Bhamc.Q24" class="form-control" />
+                <span asp-validation-for="Bhamc.Q24" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q25" class="control-label"></label>
+                <select asp-for="Bhamc.Q25" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q25" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q26" class="control-label"></label>
+                <input asp-for="Bhamc.Q26" class="form-control" />
+                <span asp-validation-for="Bhamc.Q26" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q27" class="control-label"></label>
+                <select asp-for="Bhamc.Q27" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q27" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q28" class="control-label"></label>
+                <select asp-for="Bhamc.Q28" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q28" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q29" class="control-label"></label>
+                <input asp-for="Bhamc.Q29" class="form-control" />
+                <span asp-validation-for="Bhamc.Q29" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q30" class="control-label"></label>
+                <input asp-for="Bhamc.Q30" class="form-control" />
+                <span asp-validation-for="Bhamc.Q30" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q31" class="control-label"></label>
+                <select asp-for="Bhamc.Q31" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q31" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q32" class="control-label"></label>
+                <select asp-for="Bhamc.Q32" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q32" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q32_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q32_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q32_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q33" class="control-label"></label>
+                <select asp-for="Bhamc.Q33" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q33" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q34" class="control-label"></label>
+                <select asp-for="Bhamc.Q34" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q34" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q35" class="control-label"></label>
+                <select asp-for="Bhamc.Q35" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q35" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ35" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ35" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ35" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q36" class="control-label"></label>
+                <select asp-for="Bhamc.Q36" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q36" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ36" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ36" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ36" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q37" class="control-label"></label>
+                <input asp-for="Bhamc.Q37" class="form-control" />
+                <span asp-validation-for="Bhamc.Q37" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q38" class="control-label"></label>
+                <input asp-for="Bhamc.Q38" class="form-control" />
+                <span asp-validation-for="Bhamc.Q38" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q39" class="control-label"></label>
+                <select asp-for="Bhamc.Q39" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q39" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q40" class="control-label"></label>
+                <input asp-for="Bhamc.Q40" class="form-control" />
+                <span asp-validation-for="Bhamc.Q40" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q41" class="control-label"></label>
+                <input asp-for="Bhamc.Q41" class="form-control" />
+                <span asp-validation-for="Bhamc.Q41" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q42" class="control-label"></label>
+                <select asp-for="Bhamc.Q42" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q42" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q43_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q43_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q43_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q43_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q43_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q43_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q43_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q43_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q43_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q43_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q43_6" /> @Html.DisplayNameFor(model => model.Bhamc.Q43_6)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q44" class="control-label"></label>
+                <select asp-for="Bhamc.Q44" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q44" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q45" class="control-label"></label>
+                <select asp-for="Bhamc.Q45" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q45" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q46" class="control-label"></label>
+                <select asp-for="Bhamc.Q46" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q46" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q47" class="control-label"></label>
+                <select asp-for="Bhamc.Q47" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q47" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q48" class="control-label"></label>
+                <input asp-for="Bhamc.Q48" class="form-control" />
+                <span asp-validation-for="Bhamc.Q48" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q49" class="control-label"></label>
+                <select asp-for="Bhamc.Q49" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q49" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q50" class="control-label"></label>
+                <input asp-for="Bhamc.Q50" class="form-control" />
+                <span asp-validation-for="Bhamc.Q50" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q51" class="control-label"></label>
+                <input asp-for="Bhamc.Q51" class="form-control" />
+                <span asp-validation-for="Bhamc.Q51" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q52" class="control-label"></label>
+                <input asp-for="Bhamc.Q52" class="form-control" />
+                <span asp-validation-for="Bhamc.Q52" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q53" class="control-label"></label>
+                <select asp-for="Bhamc.Q53" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q53" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q54" class="control-label"></label>
+                <select asp-for="Bhamc.Q54" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q54" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q54_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q54_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q54_1" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q54_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q54_2)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q54_3" class="control-label"></label>
+                <input asp-for="Bhamc.Q54_3" class="form-control" />
+                <span asp-validation-for="Bhamc.Q54_3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q55" class="control-label"></label>
+                <select asp-for="Bhamc.Q55" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q55" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q56" class="control-label"></label>
+                <select asp-for="Bhamc.Q56" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q56" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q56_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q56_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q56_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q56_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q56_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q56_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q56_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q56_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q56_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q56_5)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ56" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ56" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ56" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q58_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q58_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q58_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q58_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q58_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q58_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q58_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q58_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q59_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q59_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q59_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q59_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q59_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q59_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q59_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q59_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q59_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q59_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q59_6" /> @Html.DisplayNameFor(model => model.Bhamc.Q59_6)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q60" class="control-label"></label>
+                <select asp-for="Bhamc.Q60" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q60" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q60_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q60_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q60_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q60_2" class="control-label"></label>
+                <input asp-for="Bhamc.Q60_2" class="form-control" />
+                <span asp-validation-for="Bhamc.Q60_2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q60_3" class="control-label"></label>
+                <input asp-for="Bhamc.Q60_3" class="form-control" />
+                <span asp-validation-for="Bhamc.Q60_3" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q61_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q61_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q61_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q61_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q61_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q61_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q61_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q61_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q61_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q61_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q61_6" /> @Html.DisplayNameFor(model => model.Bhamc.Q61_6)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q62" class="control-label"></label>
+                <select asp-for="Bhamc.Q62" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q62" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q63" class="control-label"></label>
+                <input asp-for="Bhamc.Q63" class="form-control" />
+                <span asp-validation-for="Bhamc.Q63" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q64_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q64_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q64_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q64_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q64_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q64_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q64_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q64_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q64_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q64_5)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q65" class="control-label"></label>
+                <select asp-for="Bhamc.Q65" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q65" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q66" class="control-label"></label>
+                <select asp-for="Bhamc.Q66" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q66" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q65_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q65_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q65_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q67" class="control-label"></label>
+                <select asp-for="Bhamc.Q67" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q67" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ67" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ67" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ67" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q68" class="control-label"></label>
+                <select asp-for="Bhamc.Q68" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q68" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q68Yes" class="control-label"></label>
+                <select asp-for="Bhamc.Q68Yes" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q68Yes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q69" class="control-label"></label>
+                <select asp-for="Bhamc.Q69" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q69" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q70" class="control-label"></label>
+                <select asp-for="Bhamc.Q70" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q70" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q71" class="control-label"></label>
+                <select asp-for="Bhamc.Q71" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q71" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q71_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q71_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q71_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q72" class="control-label"></label>
+                <select asp-for="Bhamc.Q72" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q72" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q73" class="control-label"></label>
+                <select asp-for="Bhamc.Q73" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q73" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q74" class="control-label"></label>
+                <select asp-for="Bhamc.Q74" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q74" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q75" class="control-label"></label>
+                <select asp-for="Bhamc.Q75" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q75" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q76" class="control-label"></label>
+                <select asp-for="Bhamc.Q76" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q76" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q77" class="control-label"></label>
+                <select asp-for="Bhamc.Q77" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q77" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q78" class="control-label"></label>
+                <select asp-for="Bhamc.Q78" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q78" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q79" class="control-label"></label>
+                <input asp-for="Bhamc.Q79" class="form-control" />
+                <span asp-validation-for="Bhamc.Q79" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q80" class="control-label"></label>
+                <select asp-for="Bhamc.Q80" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q80" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q81_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q81_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q81_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q81_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q81_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q81_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q81_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q81_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q81_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q81_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q81_6" /> @Html.DisplayNameFor(model => model.Bhamc.Q81_6)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q82_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q82_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q82_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q82_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q82_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q82_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q82_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q82_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q82_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q82_5)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q83" class="control-label"></label>
+                <select asp-for="Bhamc.Q83" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q83" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q84" class="control-label"></label>
+                <select asp-for="Bhamc.Q84" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q84" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q85" class="control-label"></label>
+                <select asp-for="Bhamc.Q85" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q85" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q85_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q85_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q85_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q86" class="control-label"></label>
+                <select asp-for="Bhamc.Q86" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q86" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q86_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q86_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q86_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q87" class="control-label"></label>
+                <select asp-for="Bhamc.Q87" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q87" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q87_1" class="control-label"></label>
+                <input asp-for="Bhamc.Q87_1" class="form-control" />
+                <span asp-validation-for="Bhamc.Q87_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q88" class="control-label"></label>
+                <select asp-for="Bhamc.Q88" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q88" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q90" class="control-label"></label>
+                <select asp-for="Bhamc.Q90" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q90" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ90" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ90" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ90" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q91" class="control-label"></label>
+                <select asp-for="Bhamc.Q91" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q91" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q92" class="control-label"></label>
+                <select asp-for="Bhamc.Q92" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q92" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.OthersQ92" class="control-label"></label>
+                <input asp-for="Bhamc.OthersQ92" class="form-control" />
+                <span asp-validation-for="Bhamc.OthersQ92" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q93" class="control-label"></label>
+                <select asp-for="Bhamc.Q93" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q93" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q94" class="control-label"></label>
+                <select asp-for="Bhamc.Q94" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q94" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q95" class="control-label"></label>
+                <select asp-for="Bhamc.Q95" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q95" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q96" class="control-label"></label>
+                <input asp-for="Bhamc.Q96" class="form-control" />
+                <span asp-validation-for="Bhamc.Q96" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q97" class="control-label"></label>
+                <input asp-for="Bhamc.Q97" class="form-control" />
+                <span asp-validation-for="Bhamc.Q97" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q98_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q98_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q98_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q98_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q98_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q98_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q98_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q98_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q98_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q98_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q98_6" /> @Html.DisplayNameFor(model => model.Bhamc.Q98_6)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q99_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q99_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q99_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q99_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q99_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q99_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q99_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q99_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q99_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q99_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_1_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_1_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_2_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_2_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_2_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_2_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_2_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_2_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_3_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_3_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_3_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_3_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_3_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_3_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_3_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_3_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_4_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_4_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_4_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_4_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_4_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_4_3)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_4_4" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_4_4)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_4_5" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_4_5)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_5_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_5_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q100_6_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q100_6_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q101_1" /> @Html.DisplayNameFor(model => model.Bhamc.Q101_1)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q101_2" /> @Html.DisplayNameFor(model => model.Bhamc.Q101_2)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Bhamc.Q101_3" /> @Html.DisplayNameFor(model => model.Bhamc.Q101_3)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q102" class="control-label"></label>
+                <input asp-for="Bhamc.Q102" class="form-control" />
+                <span asp-validation-for="Bhamc.Q102" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.Q103" class="control-label"></label>
+                <select asp-for="Bhamc.Q103" class="form-control"></select>
+                <span asp-validation-for="Bhamc.Q103" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bhamc.CreatedDate" class="control-label"></label>
+                <input asp-for="Bhamc.CreatedDate" class="form-control" />
+                <span asp-validation-for="Bhamc.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
