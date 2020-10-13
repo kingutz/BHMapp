@@ -3,14 +3,16 @@ using System;
 using BHMapp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BHMapp.Migrations
 {
     [DbContext(typeof(BHMContext))]
-    partial class BHMContextModelSnapshot : ModelSnapshot
+    [Migration("20201010103021_BM2020")]
+    partial class BM2020
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

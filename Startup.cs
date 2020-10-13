@@ -27,8 +27,10 @@ namespace BHMapp
         {
             services.AddRazorPages();
 
+            //services.AddDbContext<BHMContext>(options =>
+            //        options.UseSqlServer(Configuration.GetConnectionString("BHMContext")));
             services.AddDbContext<BHMContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("BHMContext")));
+            options.UseSqlite(Configuration.GetConnectionString("DefaultSQLite")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

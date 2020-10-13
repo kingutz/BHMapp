@@ -59,23 +59,23 @@ namespace BHMapp.Models
         [Display(Name = "Q3. What is your religion?")]
         public E3 Q3 { get; set; }
 
-        [Display(Name = "Q3. 4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         public string OthersQ3 { get; set; }
 
         [Display(Name = "Q4. What is your tribe?")]
         public E4 Q4 { get; set; }
 
-        [Display(Name = "Q4. 4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         public string OthersQ4 { get; set; }
 
         [Display(Name = "Q5. Marital status ")]
         public E5 Q5 { get; set; }
 
-        [Display(Name = "Q6. Are you in polygamous marriage or relationship?")]
+        [Display(Name = "Q6. Are you in polygamous marriage?")]
         public E6 Q6 { get; set; }
 
 
-        [Display(Name = "Q7. How long have you being living together? (below 1 year, write in months)")]
+        [Display(Name = "Q7. How long have you being living together?")]
         [Range(1, 40, ErrorMessage = "check??")]
         public uint? Q7 { get; set; }
 
@@ -88,7 +88,7 @@ namespace BHMapp.Models
         [Display(Name = "Q10. What is your occupation?")]
         public E10 Q10 { get; set; }
 
-        [Display(Name = "Q10. 6 Other(specify)")]
+        [Display(Name = "6. Other(specify)")]
         public string OthersQ10 { get; set; }
 
         [Display(Name = "Q11. What is your approximate income per month?(Tanzanian shillings)")]
@@ -97,19 +97,19 @@ namespace BHMapp.Models
 
         //Q12 Do you own the following? (write yes or no)
 
-        [Display(Name = "12_1. 1 Television")]
+        [Display(Name = "1. Television")]
         public bool Q12_1 { get; set; }
-        [Display(Name = "12_2. 2 Radio")]
+        [Display(Name = "2. Radio")]
         public bool Q12_2 { get; set; }
-        [Display(Name = "Q12_2. 3 Fridge")]
+        [Display(Name = "3. Fridge")]
         public bool Q12_3 { get; set; }
-        [Display(Name = "Q12_3. 4 Car")]
+        [Display(Name = "4. Car")]
         public bool Q12_4 { get; set; }
-        [Display(Name = "Q12_4. 5 Bicycles")]
+        [Display(Name = "5. Bicycles")]
         public bool Q12_5 { get; set; }
-        [Display(Name = "Q12_5. 6 Motorcycles")]
+        [Display(Name = "6. Motorcycles")]
         public bool Q12_6 { get; set; }
-        [Display(Name = "Q12_6. 7 Land")]
+        [Display(Name = "7. Land")]
         public bool Q12_7 { get; set; }
 
         //[Display(Name = "Do you own the following? (write yes or no)")]
@@ -118,43 +118,43 @@ namespace BHMapp.Models
         [Display(Name = "Q13. House ownership?")]
         public E13 Q13 { get; set; }
 
-        [Display(Name = "Q13. 5 Other(specify)")]
+        [Display(Name = "5. Other(specify)")]
         public string OthersQ13 { get; set; }
 
 
 
-        [Display(Name = "Q14. If you rent, how much do you pay per month?")]
+        [Display(Name = "Q14.How much do you pay per month?")]
         [Range(1000, 3000000, ErrorMessage = "Amount!!!")]
         public uint? Q14 { get; set; }
 
         [Display(Name = "Q15. Walls of your house?")]
         public E15 Q15 { get; set; }
 
-        [Display(Name = "5 Other(specify)")]
+        [Display(Name = "5. Other(specify)")]
         public string OthersQ15 { get; set; }
 
-        [Display(Name = "Toilet facility?")]
+        [Display(Name = "Q16. Toilet facility?")]
         public E16 Q16 { get; set; }
 
-        [Display(Name = "Do you share the toilet with other family?")]
+        [Display(Name = "Q17. Do you share the toilet with other family?")]
         public E9 Q17 { get; set; }
 
-        [Display(Name = "Where do you get your water from?")]
+        [Display(Name = "Q18. Where do you get your water from?")]
         public E18 Q18 { get; set; }
 
-        [Display(Name = "5 Other(specify)")]
+        [Display(Name = "5. Other(specify)")]
         public string OthersQ18 { get; set; }
 
-        [Display(Name = "Does your house have electric supply?")]
+        [Display(Name = "Q19. Does your house have electric supply?")]
         public E9 Q19 { get; set; }
 
-        [Display(Name = "How frequent do get your meal?(breakfast inclusive)")]
+        [Display(Name = "Q20. How frequent do get your meal?(breakfast inclusive)")]
         public E20 Q20 { get; set; }
 
-        [Display(Name = "4 More than three(specify)")]
+        [Display(Name = "4. More than three(specify)")]
         public string OthersQ20 { get; set; }
 
-        [Display(Name = "Does your house have electric supply?")]
+        [Display(Name = "Q21. Does your house have electric supply?")]
         public E21 Q21 { get; set; }
 
         //[Display(Name = "Of what kind?")]
@@ -164,92 +164,92 @@ namespace BHMapp.Models
         //public string OthersQ22 { get; set; }
 
         //Of what kind? Q22
-        [Display(Name = "1 Local brew")]
+        [Display(Name = "1. Local brew")]
         public bool Q22_1 { get; set; }
-        [Display(Name = "2 Beer")]
+        [Display(Name = "2. Beer")]
         public bool Q22_2 { get; set; }
-        [Display(Name = "3 Viroba/konyagi")]
+        [Display(Name = "3. Viroba/konyagi")]
         public bool Q22_3 { get; set; }
-        [Display(Name = "4 Others")]
+        [Display(Name = "4. Others")]
         public bool Q22_4 { get; set; }
 
-        [Display(Name = "4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         public string OthersQ22_4 { get; set; }
 
-        [Display(Name = "Do you often travel away from your home?")]
+        [Display(Name = "Q23. Do you often travel away from your home?")]
         public E23 Q23 { get; set; }
 
 
         //..........REPRODUCTIVE HEALTH...........
 
-        [Display(Name = "Gravida")]
+        [Display(Name = "Q24. Gravida")]
         public uint Q24{ get; set; }
 
 
-        [Display(Name = "History of miscarriage/abortion")]
+        [Display(Name = "Q25. History of miscarriage/abortion")]
         public E9 Q25 { get; set; }
 
-        [Display(Name = "Parity")]
+        [Display(Name = "Q26. Parity")]
         [Range(1, 20, ErrorMessage = "Not applicable!!")]
         public uint? Q26 { get; set; }
 
-        [Display(Name = "History of stillbirth")]
+        [Display(Name = "Q27. History of stillbirth")]
         public E9 Q27 { get; set; }
 
-        [Display(Name = "Did you give birth to live baby then died?")]
+        [Display(Name = "Q28. Did you give birth to live baby then died?")]
         public E9 Q28 { get; set; }
 
-        [Display(Name = "How many children do you have")]
+        [Display(Name = "Q29. How many children do you have")]
         [Range(0, 20, ErrorMessage = "Not applicable!!")]
         public uint? Q29 { get; set; }
 
 
-        [Display(Name = "What is the age of your last born(in years)")]
+        [Display(Name = "Q30. What is the age of your last born(in years)")]
         [Range(0, 100, ErrorMessage = "Not applicable!!")]
         public uint? Q30 { get; set; }
 
-        [Display(Name = "Did you delivered in the hospital/clinic?(your last born)")]
+        [Display(Name = "Q31. Did you delivered in the hospital/clinic?(your last born)")]
         public E9 Q31 { get; set; }
 
 
-        [Display(Name = "Do all children of the same father? (including current pregnancy")]
+        [Display(Name = "Q32. Do all children of the same father? (including pregnancy")]
         public E9 Q32 { get; set; }
 
         [Display(Name = "(number of fathers)")]
         [Range(0, 20, ErrorMessage = "Not applicable!!")]
         public uint? Q32_1 { get; set; }
 
-        [Display(Name = "Do you usually clean inside the vagina?(Elaborate the difference between vagina and vulva)")]
+        [Display(Name = "Q33. Do you usually clean inside the vagina?(Elaborate the difference between vagina and vulva)")]
         public E9 Q33 { get; set; }
 
-        [Display(Name = "Number of times per day")]
+        [Display(Name = "Q34. Number of times per day")]
         public E34 Q34 { get; set; }
 
-        [Display(Name = "If yes, what do you use")]
+        [Display(Name = "Q35. What do you use")]
         public E35 Q35 { get; set; }
 
-        [Display(Name = "4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         public string OthersQ35 { get; set; }
 
-        [Display(Name = "If yes, what do you use")]
+        [Display(Name = "Q36. What do you use to wash with")]
         public E36 Q36 { get; set; }
 
-        [Display(Name = "4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         public string OthersQ36 { get; set; }
 
 
-        [Display(Name = "Why do you wash inside the vagina and not only the vulva area?")]
+        [Display(Name = "Q37. Why do you wash inside the vagina and not only the vulva area?")]
         public string Q37 { get; set; }
 
         //.............INFORMATION ON PARTNER AND INFECTIOUS DISEASE..........
-        [Display(Name = "Age at sexual debut?")]
+        [Display(Name = "Q38. Age at sexual debut?")]
         [Range(8, 20, ErrorMessage = "Not applicable!!")]
         public uint? Q38 { get; set; }
 
-        [Display(Name = "Was it voluntary or involuntary?")]
+        [Display(Name = "Q39. Was it voluntary or involuntary?")]
         public E39 Q39 { get; set; }
 
-        [Display(Name = "Including your current partner, how many partners did you have in the past 12 months?")]
+        [Display(Name = "Q40. Including your current partner, how many partners did you have in the past 12 months?")]
         [Range(0, 100, ErrorMessage = "Not applicable!!")]
         public uint? Q40 { get; set; }
 
@@ -257,60 +257,60 @@ namespace BHMapp.Models
         [Range(0, 100, ErrorMessage = "Not applicable!!")]
         public uint? Q41 { get; set; }
 
-        [Display(Name = "Have you ever used condom?")]
+        [Display(Name = "Q42. Have you ever used condom?")]
         public E42 Q42 { get; set; }
 
         // Q43 Have you been treated or got the following symptoms in the past 12 months?
-        [Display(Name = "1 Abnormal vaginal discharge")]
+        [Display(Name = "1. Abnormal vaginal discharge")]
         public bool Q43_1 { get; set; }
-        [Display(Name = "2 Genital ulcers ")]
+        [Display(Name = "2. Genital ulcers ")]
         public bool Q43_2 { get; set; }
-        [Display(Name = "3 Genital itching")]
+        [Display(Name = "3. Genital itching")]
         public bool Q43_3 { get; set; }
-        [Display(Name = "4 Genital warts")]
+        [Display(Name = "4. Genital warts")]
         public bool Q43_4 { get; set; }
-        [Display(Name = "5 Painful micturation")]
+        [Display(Name = "5. Painful micturation")]
         public bool Q43_5 { get; set; }
-        [Display(Name = "6 Pain during sex")]
+        [Display(Name = "6. Pain during sex")]
         public bool Q43_6 { get; set; }
 
         //...................HIV AND SYPHILIS TESTING AND PARTNER’S DISCLOSURE
 
-        [Display(Name = "Have ever tested for HIV")]
+        [Display(Name = "Q44. Have ever tested for HIV")]
         public E9 Q44 { get; set; }
 
-        [Display(Name = "Did you test for HIV status in past pregnancies?")]
+        [Display(Name = "Q45. Did you test for HIV status in past pregnancies?")]
         public E9 Q45 { get; set; }
 
 
-        [Display(Name = "HIV status")]
+        [Display(Name = "Q46. HIV status")]
         public E46 Q46 { get; set; }
 
-        [Display(Name = "Have you tested for HIV status in this (current)  pregnancy")]
+        [Display(Name = "Q47. Have you tested for HIV status in this (current)  pregnancy")]
         public E47 Q47 { get; set; }
 
 
-        [Display(Name = "How many times have you tested for HIV status?")]
+        [Display(Name = "Q48. How many times have you tested for HIV status?")]
         [Range(0, 30, ErrorMessage = "Not applicable!!")]
         public uint? Q48 { get; set; }
 
-        [Display(Name = "If tested in this pregnancy have you told your partner? ")]
+        [Display(Name = "Q49. If tested in this pregnancy have you told your partner? ")]
         public E9 Q49 { get; set; }
 
-        [Display(Name = "If no why?")]
+        [Display(Name = "Q50. If no why?")]
         public string Q50 { get; set; }
 
-        [Display(Name = "What time passed before telling your partner? (in days)")]
+        [Display(Name = "Q51. What time passed before telling your partner? (in days)")]
         [Range(1, 361, ErrorMessage = "Not applicable!!")]
         public uint? Q51 { get; set; }
 
-        [Display(Name = "What was his response?")]
+        [Display(Name = "Q52. What was his response?")]
         public string Q52 { get; set; }
 
-        [Display(Name = "Did your partner come to test for HIV in this clinic or any other place?")]
+        [Display(Name = "Q53. Did your partner come to test for HIV in this clinic or any other place?")]
         public E9 Q53 { get; set; }
 
-        [Display(Name = "If you were tested positive")]
+        [Display(Name = "Q54. If you were tested positive")]
         public E9 Q54 { get; set; }
 
         //.......Q54 If you were tested positive
@@ -325,36 +325,36 @@ namespace BHMapp.Models
         [Display(Name = "Are you using drugs for PMTCT of HIV?(write name of the drug)")]
         public string Q54_3 { get; set; }
 
-        [Display(Name = "Have you tested for syphilis in this pregnancy?")]
+        [Display(Name = "Q55. Have you tested for syphilis in this pregnancy?")]
         public E9 Q55 { get; set; }
 
-        [Display(Name = "Syphilis status?")]
+        [Display(Name = "Q56. Syphilis status?")]
         public E46 Q56 { get; set; }
 
         //Q57 Can you discuss issues regarding HIV/AIDS with(tick the appropriate)
 
-        [Display(Name = "1 Family member(s)")]
+        [Display(Name = "1. Family member(s)")]
         public bool Q56_1 { get; set; }
-        [Display(Name = "2 Spouse ")]
+        [Display(Name = "2. Spouse ")]
         public bool Q56_2 { get; set; }
-        [Display(Name = "3 Friends")]
+        [Display(Name = "3. Friends")]
         public bool Q56_3 { get; set; }
-        [Display(Name = "4 Farmer")]
+        [Display(Name = "4. Farmer")]
         public bool Q56_4 { get; set; }
-        [Display(Name = "5 Others(specify)")]
+        [Display(Name = "5. Others(specify)")]
         public bool Q56_5 { get; set; }
 
         [Display(Name = "5 Others(specify)")]
         public string OthersQ56 { get; set; }
 
         //Q58 Have you ever discussed with your partner about matter relating to (tick were appropriate)
-        [Display(Name = "1 Condom use")]
+        [Display(Name = "1. Condom use")]
         public bool Q58_1 { get; set; }
-        [Display(Name = "2 Sexual satisfaction/sexuality")]
+        [Display(Name = "2. Sexual satisfaction/sexuality")]
         public bool Q58_2 { get; set; }
-        [Display(Name = "3 About HIV ")]
+        [Display(Name = "3. About HIV ")]
         public bool Q58_3 { get; set; }
-        [Display(Name = "4 About STIs")]
+        [Display(Name = "4. About STIs")]
         public bool Q58_4 { get; set; }
 
 
@@ -373,19 +373,19 @@ namespace BHMapp.Models
         public bool Q59_6 { get; set; }
 
 
-        [Display(Name = "Have you tested for syphilis in this pregnancy?")]
+        [Display(Name = "Q60. Have you tested for syphilis in this pregnancy?")]
         public E9 Q60 { get; set; }
 
         //.......Q60 Did you receive treatment for STIs within the past 2 weeks?
-        [Display(Name = "If Yes, Date")]
+        [Display(Name = "1. If Yes, Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Q60_1 { get; set; }
 
-        [Display(Name = "Diagnosis")]
+        [Display(Name = "1. Diagnosis")]
         public string Q60_2 { get; set; }
 
-        [Display(Name = "Treatment")]
+        [Display(Name = "1. Treatment")]
         public string Q60_3 { get; set; }
 
         //.....Q61 What symptoms have you been treated?
@@ -402,143 +402,147 @@ namespace BHMapp.Models
         [Display(Name = "6. Pain during sex")]
         public bool Q61_6 { get; set; }
 
-        [Display(Name = "If you are tested and found to be infected, will you be able to bring your partner for treatment?")]
+        [Display(Name = "Q62. If you are tested and found to be infected, will you be able to bring your partner for treatment?")]
         public E9 Q62 { get; set; }
 
-        [Display(Name = "If not why?")]
+        [Display(Name = "Q63. If not why?")]
         public string Q63 { get; set; }
 
 
         //......Q64 Who else would you tell that you have STI apart from your partner?
 
-        [Display(Name = "1 Friend ")]
+        [Display(Name = "1. Friend ")]
         public bool Q64_1 { get; set; }
-        [Display(Name = "2 Family/relative")]
+        [Display(Name = "2. Family/relative")]
         public bool Q64_2 { get; set; }
-        [Display(Name = "3 Work mate")]
+        [Display(Name = "3. Work mate")]
         public bool Q64_3 { get; set; }
-        [Display(Name = "4 Neighbour")]
+        [Display(Name = "4. Neighbour")]
         public bool Q64_4 { get; set; }
-        [Display(Name = "5 Other")]
+        [Display(Name = "5. Other")]
         public bool Q64_5 { get; set; }
 
         //........PARTNER’S INFORMATION..........
-        [Display(Name = "Age of your partner")]
-        public E65 Q65 { get; set; }
+        //[Display(Name = "Q65. Age of your partner")]
+        //public E65 Q65 { get; set; }
 
-        [Display(Name = "What is his highest level of formal education attained?")]
+        [Display(Name = "Q65. Age of your partner")]
+        [Range(0, 50, ErrorMessage = "Fill 999 if dont know")]
+        public uint? Q65 { get; set; }
+
+        [Display(Name = "Q66. What is his highest level of formal education attained?")]
         public E66 Q66 { get; set; }
 
-        [Display(Name = "fill 999 if you dont know")]
-        [Range(0, 1000, ErrorMessage = "Not applicable!!")]
-        public uint? Q65_1 { get; set; }
+        //[Display(Name = "fill 999 if you dont know")]
+        //[Range(0, 1000, ErrorMessage = "Not applicable!!")]
+        //public uint? Q65_1 { get; set; }
 
-        [Display(Name = "What is your partner’s occupation?")]
+        [Display(Name = "Q67. What is your partner’s occupation?")]
         public E10 Q67 { get; set; }
-        [Display(Name = "5 Others(specify)")]
+        [Display(Name = "5. Others(specify)")]
         public string OthersQ67 { get; set; }
 
-        [Display(Name = "Does your partner travel frequently outside the region")]
+        [Display(Name = "Q68. Does your partner travel frequently outside the region")]
         public E9 Q68 { get; set; }
 
         //Q68 if Yes, per week/month
         [Display(Name = "if Yes, per week/month")]
         public E68Yes Q68Yes { get; set; }
 
-        [Display(Name = "Does your partner drink alcohol?")]
+        [Display(Name = "Q69. Does your partner drink alcohol?")]
         public E21 Q69 { get; set; }
 
-        [Display(Name = "Of what kind?")]
-        public E70 Q70 { get; set; }
+        //[Display(Name = "Of what kind?")]
+        //public E70 Q70 { get; set; }
 
         //Of what kind? Q70
-        [Display(Name = "1 Local brew")]
+        [Display(Name = "1. Local brew")]
         public bool Q70_1 { get; set; }
-        [Display(Name = "2 Beer")]
+        [Display(Name = "2. Beer")]
         public bool Q70_2 { get; set; }
-        [Display(Name = "3 Viroba/konyagi")]
+        [Display(Name = "3. Viroba/konyagi")]
         public bool Q70_3 { get; set; }
-        [Display(Name = "4 Others")]
+        [Display(Name = "4. Others")]
         public bool Q70_4 { get; set; }
 
-        [Display(Name = "4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         public string OthersQ70_4 { get; set; }
 
 
 
         //.........MOTHER’S DIET DURING PREGNANCY
-        [Display(Name = "In this pregnancy have you been tested for Hb? (Check the ANC card")]
+        [Display(Name = "Q71. In this pregnancy have you been tested for Hb? (Check the ANC card")]
         public E9 Q71 { get; set; }
 
         [Display(Name = "Hb levels")]
         [Range(0, 50, ErrorMessage = "Not applicable!!")]
         public uint? Q71_1 { get; set; }
 
-        [Display(Name = "In this pregnancy have you been given FeFo ?")]
+        [Display(Name = "Q72. In this pregnancy have you been given FeFo ?")]
         public E9 Q72 { get; set; }
 
-        [Display(Name = "Do you have a habit of eating things that are not food in this pregnancy (soil, uncooked rice, charcoal etc)")]
+        [Display(Name = "Q73. Do you have a habit of eating things that are not food in this pregnancy (soil, uncooked rice, charcoal etc)")]
         public E9 Q73 { get; set; }
 
-        [Display(Name = "Before getting pregnant how many meals were you eating per day?")]
+        [Display(Name = "Q74. Before getting pregnant how many meals were you eating per day?")]
         public E74 Q74 { get; set; }
 
-        [Display(Name = "How many times have you eaten meat in the past one week")]
+        [Display(Name = "Q75. How many times have you eaten meat in the past one week")]
         public E75 Q75 { get; set; }
 
-        [Display(Name = "How many times have you eaten fish in the past one week?")]
+        [Display(Name = "Q76. How many times have you eaten fish in the past one week?")]
         public E75 Q76 { get; set; }
 
-        [Display(Name = "In the past one year did you face food scarcity?")]
+        [Display(Name = "Q77. In the past one year did you face food scarcity?")]
         public E77 Q77 { get; set; }
 
-        [Display(Name = "How many times do you eat during this pregnancy period?")]
+        [Display(Name = "Q78. How many times do you eat during this pregnancy period?")]
         public E78 Q78 { get; set; }
 
-        [Display(Name = "Can you please mention what have you eaten in the past 24hrs since you woke up till you went back to bed.(write from Morning to evening meals she mentions)")]
+        [Display(Name = "Q79. Can you please mention what have you eaten in the past 24hrs since you woke up till you went back to bed.(write from Morning to evening meals she mentions)")]
         public string Q79 { get; set; }
 
 
         //......INFANT FEEDING INFORMATION
 
-        [Display(Name = "Have you received counseling in infant feeding in this clinic?")]
+        [Display(Name = "Q80. Have you received counseling in infant feeding in this clinic?")]
         public E9 Q80 { get; set; }
 
         //Q81 If Yes, what kind of counselling did you receive
-        [Display(Name = "1.Position")]
+        [Display(Name = "1. Position")]
         public bool Q81_1 { get; set; }
-        [Display(Name = "2.Attachemnt of the baby on breast")]
+        [Display(Name = "2. Attachemnt of the baby on breast")]
         public bool Q81_2 { get; set; }
-        [Display(Name = "3.Breast problems handling")]
+        [Display(Name = "3. Breast problems handling")]
         public bool Q81_3 { get; set; }
-        [Display(Name = "4.Feeding the infant colostrum")]
+        [Display(Name = "4. Feeding the infant colostrum")]
         public bool Q81_4 { get; set; }
-        [Display(Name = "5.EBF")]
+        [Display(Name = "5. EBF")]
         public bool Q81_5 { get; set; }
-        [Display(Name = "6.Others")]
+        [Display(Name = "6. Others")]
         public bool Q81_6 { get; set; }
 
 
         //....Q82 Where else have you heard about breast feeding and infant feeding?
 
-        [Display(Name = " 1.Family members(mothers /mother in law)")]
+        [Display(Name = " 1. Family members(mothers /mother in law)")]
         public bool Q82_1 { get; set; }
-        [Display(Name = "2.Media(Radio/tv/newpaper)")]
+        [Display(Name = "2. Media(Radio/tv/newpaper)")]
         public bool Q82_2 { get; set; }
-        [Display(Name = "3.Friends and neighbours")]
+        [Display(Name = "3. Friends and neighbours")]
         public bool Q82_3 { get; set; }
-        [Display(Name = "4.Mobile")]
+        [Display(Name = "4. Mobile")]
         public bool Q82_4 { get; set; }
-        [Display(Name = "5.Others")]
+        [Display(Name = "5. Others")]
         public bool Q82_5 { get; set; }
 
-        [Display(Name = "How long does it take to start BF after delivery?")]
+        [Display(Name = "Q83. How long does it take to start BF after delivery?")]
         public E83 Q83 { get; set; }
 
-        [Display(Name = "What is the meaning of exclusive brastfeeding?")]
+        [Display(Name = "Q84. What is the meaning of exclusive brastfeeding?")]
         public E84 Q84 { get; set; }
 
-        [Display(Name = "What is the approprate duration for EBF?")]
+        [Display(Name = "Q85. What is the approprate duration for EBF?")]
         public E85 Q85 { get; set; }
 
         [Display(Name = "If you dont know write 0")]
@@ -552,129 +556,129 @@ namespace BHMapp.Models
         [Range(0, 1000, ErrorMessage = "Not applicable!!")]
         public uint? Q86_1 { get; set; }
 
-        [Display(Name = "What is the appropriate time for breastfeeding cessation? ")]
+        [Display(Name = "Q87. What is the appropriate time for breastfeeding cessation? ")]
         public E87 Q87 { get; set; }
 
         [Display(Name = "If you dont know write 0")]
         [Range(0, 1000, ErrorMessage = "Not applicable!!")]
         public uint? Q87_1 { get; set; }
 
-        [Display(Name = "Does a woman with HIV allowed to breastfeed?")]
+        [Display(Name = "Q88. Does a woman with HIV allowed to breastfeed?")]
         public E9 Q88 { get; set; }
 
-        [Display(Name = "If No, Why?")]
+        [Display(Name = "Q90. If No, Why?")]
         public E90 Q90 { get; set; }
 
         [Display(Name = "Others")]
         public string OthersQ90 { get; set; }
 
-        [Display(Name = "Is it necessary to feed newborn with colostrums?")]
+        [Display(Name = "Q91. Is it necessary to feed newborn with colostrums?")]
         public E9 Q91 { get; set; }
 
-        [Display(Name = "If no why?")]
+        [Display(Name = "Q92. If no why?")]
         public E92 Q92 { get; set; }
 
 
         [Display(Name = "Others")]
         public string OthersQ92 { get; set; }
 
-        [Display(Name = "If Yes why?")]
+        [Display(Name = "Q93. If Yes why?")]
         public E93 Q93 { get; set; }
 
-        [Display(Name = "What are the causes of cracked nipples?")]
+        [Display(Name = "Q94. What are the causes of cracked nipples?")]
         public E94 Q94 { get; set; }
 
-        [Display(Name = "After delivery what method of infant feeding are you planning to use ?")]
+        [Display(Name = "Q95. After delivery what method of infant feeding are you planning to use ?")]
         public E95 Q95 { get; set; }
 
-        [Display(Name = "(If the mother is HIV positive For how long are you planning to breastfeed your child ?")]
+        [Display(Name = "(Q96. If the mother is HIV positive For how long are you planning to breastfeed your child ?")]
         [Range(0, 100, ErrorMessage = "Not applicable!!")]
         public uint? Q96 { get; set; }
 
-        [Display(Name = "In your own oinion do you think it is possible to practice EBF?")]
+        [Display(Name = "Q97. In your own oinion do you think it is possible to practice EBF?")]
         public string Q97 { get; set; }
 
         //...........CLINICAL EXAMINATION OF GENITALIA
 
 
         //Q98 External genitalia (tick where appropriate
-        [Display(Name = "1.Normal")]
+        [Display(Name = "1. Normal")]
         public bool Q98_1 { get; set; }
         [Display(Name = "2.	Irritation/redness")]
         public bool Q98_2 { get; set; }
         [Display(Name = "3.	Swelling")]
         public bool Q98_3 { get; set; }
-        [Display(Name = "4.Blisters")]
+        [Display(Name = "4. Blisters")]
         public bool Q98_4 { get; set; }
-        [Display(Name = "5.Sores/ulcers")]
+        [Display(Name = "5. Sores/ulcers")]
         public bool Q98_5 { get; set; }
-        [Display(Name = "6.Genital warts")]
+        [Display(Name = "6. Genital warts")]
         public bool Q98_6 { get; set; }
 
 
         //Q99 Internal genitalia (tick where appropriate)
 
-        [Display(Name = "1.Normal")]
+        [Display(Name = "1. Normal")]
         public bool Q99_1 { get; set; }
-        [Display(Name = "2.Irritation/redness")]
+        [Display(Name = "2. Irritation/redness")]
         public bool Q99_2 { get; set; }
-        [Display(Name = "3.Blisters")]
+        [Display(Name = "3. Blisters")]
         public bool Q99_3 { get; set; }
-        [Display(Name = "4.Sores/ulcers")]
+        [Display(Name = "4. Sores/ulcers")]
         public bool Q99_4 { get; set; }
-        [Display(Name = "5.Genital warts")]
+        [Display(Name = "5. Genital warts")]
         public bool Q99_5 { get; set; }
 
 
         //Q100 Vaginal secretion (tick where appropriate
-        [Display(Name = "1.Normal")]
+        [Display(Name = "1. Normal")]
         public bool Q100_1_1 { get; set; }
 
         //2.Amount
-        [Display(Name = "a.scarce")]
+        [Display(Name = "a. scarce")]
         public bool Q100_2_1 { get; set; }
-        [Display(Name = "b.Moderate")]
+        [Display(Name = "b. Moderate")]
         public bool Q100_2_2 { get; set; }
-        [Display(Name = "c.Profuse")]
+        [Display(Name = "c. Profuse")]
         public bool Q100_2_3 { get; set; }
 
         //3.Colour 
-        [Display(Name = "a.clear")]
+        [Display(Name = "a. clear")]
         public bool Q100_3_1 { get; set; }
-        [Display(Name = "b.white")]
+        [Display(Name = "b. white")]
         public bool Q100_3_2 { get; set; }
-        [Display(Name = "c.brown")]
+        [Display(Name = "c. brown")]
         public bool Q100_3_3 { get; set; }
-        [Display(Name = "d.cream/yellow")]
+        [Display(Name = "d. cream/yellow")]
         public bool Q100_3_4 { get; set; }
 
         //4.Consistency
 
-        [Display(Name = "a.thick")]
+        [Display(Name = "a. thick")]
         public bool Q100_4_1 { get; set; }
-        [Display(Name = "b.thin")]
+        [Display(Name = "b. thin")]
         public bool Q100_4_2 { get; set; }
-        [Display(Name = "c.foamy")]
+        [Display(Name = "c. foamy")]
         public bool Q100_4_3 { get; set; }
-        [Display(Name = "d.curdlike")]
+        [Display(Name = "d. curdlike")]
         public bool Q100_4_4 { get; set; }
-        [Display(Name = "d.homogenous")]
+        [Display(Name = "d. homogenous")]
         public bool Q100_4_5 { get; set; }
 
         //5.Coating of vaginal walls
-        [Display(Name = "5.Coating of vaginal walls")]
+        [Display(Name = "5. Coating of vaginal walls")]
         public bool Q100_5_1 { get; set; }
 
         //6.Smelling
-        [Display(Name = "6.Smelling")]
+        [Display(Name = "6. Smelling")]
         public bool Q100_6_1 { get; set; }
 
         //Q101 Sample collected from (tick where appropriate)
-        [Display(Name = "1 Blood")]
+        [Display(Name = "1. Blood")]
         public bool Q101_1 { get; set; }
-        [Display(Name = "2 Vaginal")]
+        [Display(Name = "2. Vaginal")]
         public bool Q101_2 { get; set; }
-        [Display(Name = "3 Urin")]
+        [Display(Name = "3. Urin")]
         public bool Q101_3 { get; set; }
 
         //Vaginal sample          
@@ -683,79 +687,79 @@ namespace BHMapp.Models
         public uint? Q102 { get; set; }
 
         //Whiff’s test    
-        [Display(Name = "Whiff’s test")]
+        [Display(Name = "Q103. Whiff’s test")]
         public E103 Q103 { get; set; }
 
         [Display(Name = "Created Date")]
         public DateTime CreatedDate { get; set; }
-    }
+    //}
 
 
     public enum E3
     {
-        [Display(Name = "1 Christian")]
+        [Display(Name = "1. Christian")]
         Christian=1,
-        [Display(Name = "2 Muslim")]
+        [Display(Name = "2. Muslim")]
         Muslim=2,
-        [Display(Name = "3 Traditional")]
+        [Display(Name = "3. Traditional")]
         Traditional=3,
-        [Display(Name = "4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         Others=4
     }
     public enum E4
     {
-        [Display(Name = "1 Chaga")]
+        [Display(Name = "1. Chaga")]
         Chaga = 1,
-        [Display(Name = "2 Pare")]
+        [Display(Name = "2. Pare")]
         Pare = 2,
-        [Display(Name = "3 Sambaa")]
+        [Display(Name = "3. Sambaa")]
         Sambaa = 3,
-        [Display(Name = "4 Other(specify)")]
+        [Display(Name = "4. Other(specify)")]
         Others = 4
     }
     public enum E5
     {
-        [Display(Name = "1 Married")]
+        [Display(Name = "1. Married")]
         Married = 1,
-        [Display(Name = "2 Cohabiting ")]
+        [Display(Name = "2. Cohabiting ")]
         Cohabiting = 2,
-        [Display(Name = "3 Single")]
+        [Display(Name = "3. Single")]
         Single = 3,
-        [Display(Name = "4 Widow")]
+        [Display(Name = "4. Widow")]
         Widow = 4,
-        [Display(Name = "5 Separated/divorced")]
+        [Display(Name = "5. Separated/divorced")]
         Separated_divorced = 5
     }
     public enum E6
     {
-        [Display(Name = "0 No")]
+        [Display(Name = "0 . No")]
         No = 0,
-        [Display(Name = "1 Yes")]
+        [Display(Name = "1 .Yes")]
         Yes = 1,
-        [Display(Name = "2 I don’t know")]
+        [Display(Name = "2 . I don’t know")]
         Dontknow = 2
 
     }
     public enum E8
     {
-        [Display(Name = "1 Not attended formal education")]
+        [Display(Name = "1. Not attended formal education")]
         Noeducation = 1,
-        [Display(Name = "2 Primary school")]
+        [Display(Name = "2. Primary school")]
         Primaryschool = 2,
-        [Display(Name = "3 Secondary school")]
+        [Display(Name = "3. Secondary school")]
         Secondaryschool = 3,
-        [Display(Name = "4 College and above ")]
+        [Display(Name = "4. College and above ")]
         Collegeabove = 4,
-        [Display(Name = "5 Certificate or technical education")]
+        [Display(Name = "5. Certificate or technical education")]
         CertificateTechnicalEducation = 5
 
     }
     //Questions Repeat
     public enum E9
     {
-        [Display(Name = "0 No")]
+        [Display(Name = "0. No")]
         No = 0,
-        [Display(Name = "1 Yes")]
+        [Display(Name = "1. Yes")]
         Yes = 1
 
 
@@ -764,100 +768,100 @@ namespace BHMapp.Models
     //Questions Repeat
     public enum E10
     {
-        [Display(Name = "1 Unemployed")]
+        [Display(Name = "1. Unemployed")]
         Unemployed = 1,
-        [Display(Name = "2 Employed")]
+        [Display(Name = "2. Employed")]
         Employed = 2,
-        [Display(Name = "3 Business")]
+        [Display(Name = "3. Business")]
         Business = 3,
-        [Display(Name = "4 Farmer")]
+        [Display(Name = "4. Farmer")]
         Farmer = 4,
-        [Display(Name = "5 Student")]
+        [Display(Name = "5. Student")]
         Student = 5,
-        [Display(Name = "6 Others ")]
+        [Display(Name = "6. Others ")]
         Others = 6
 
 
     }
     public enum E12
     {
-        [Display(Name = "1 Television")]
+        [Display(Name = "1. Television")]
         Television = 1,
-        [Display(Name = "2 Radio")]
+        [Display(Name = "2. Radio")]
         Radio = 2,
-        [Display(Name = "3 Fridge")]
+        [Display(Name = "3. Fridge")]
         Fridge = 3,
-        [Display(Name = "4 Car")]
+        [Display(Name = "4. Car")]
         Car = 4,
-        [Display(Name = "5 Bicycles")]
+        [Display(Name = "5. Bicycles")]
         Bicycles = 5,
-        [Display(Name = "6 Motorcycles")]
+        [Display(Name = "6. Motorcycles")]
         Motorcycles = 6,
-        [Display(Name = "7 Land ")]
+        [Display(Name = "7. Land ")]
         Land = 7
 
 
     }
     public enum E13
     {
-        [Display(Name = "1 Own house")]
+        [Display(Name = "1. Own house")]
         Ownhouse = 1,
-        [Display(Name = "2 Rent house")]
+        [Display(Name = "2. Rent house")]
         Renthouse = 2,
-        [Display(Name = "3 Rent room/rooms")]
+        [Display(Name = "3. Rent room/rooms")]
         Rentrooms = 3,
-        [Display(Name = "4 Living with relative/my family/parents")]
+        [Display(Name = "4. Living with relative/my family/parents")]
         LivingWithFamily = 4,
-        [Display(Name = "5 Others(specify")]
+        [Display(Name = "5. Others(specify")]
         Others = 5
     }
     public enum E15
     {
-        [Display(Name = "1 Brick/brock")]
+        [Display(Name = "1. Brick/brock")]
         Brick_brock = 1,
-        [Display(Name = "2 Wood")]
+        [Display(Name = "2. Wood")]
         Wood = 2,
-        [Display(Name = "3 Mud")]
+        [Display(Name = "3. Mud")]
         Mud = 3,
-        [Display(Name = "4 Others(specify)")]
+        [Display(Name = "4. Others(specify)")]
         Others= 4
 
     }
     public enum E16
     {
-        [Display(Name = "1 No toilet")]
+        [Display(Name = "1. No toilet")]
         Notoilet = 1,
-        [Display(Name = "2 In the house")]
+        [Display(Name = "2. In the house")]
         InTheHouse = 2,
-        [Display(Name = "3 Outside the house")]
+        [Display(Name = "3. Outside the house")]
         OutsideTheHouse = 3,
-        [Display(Name = "4 Inside and outside the house")]
+        [Display(Name = "4. Inside and outside the house")]
         InsideOutsideHouse = 4
 
     }
     public enum E18
     {
-        [Display(Name = "1 Tap inside the house")]
+        [Display(Name = "1. Tap inside the house")]
         TapInsideHouse = 1,
-        [Display(Name = "2 Tap outside the house")]
+        [Display(Name = "2. Tap outside the house")]
         TapOutsideHouse = 2,
-        [Display(Name = "3 Common supply")]
+        [Display(Name = "3. Common supply")]
         CommonSupply = 3,
-        [Display(Name = "4 Well/river/spring")]
+        [Display(Name = "4. Well/river/spring")]
         InsideOutsideHouse = 4,
-        [Display(Name = "5 Others")]
+        [Display(Name = "5. Others")]
         Others = 5
 
     }
     public enum E20
     {
-        [Display(Name = "1 Once")]
+        [Display(Name = "1. Once")]
         Once = 1,
-        [Display(Name = "2 Twice")]
+        [Display(Name = "2. Twice")]
         Twice = 2,
-        [Display(Name = "3 Thrice")]
+        [Display(Name = "3. Thrice")]
         Thrice = 3,
-        [Display(Name = "4 More than three(specify)")]
+        [Display(Name = "4. More than three(specify)")]
         MoreThanThree = 4
 
 
@@ -865,55 +869,55 @@ namespace BHMapp.Models
     //Questions Repeat
     public enum E21
     {
-        [Display(Name = " 1 No")]
+        [Display(Name = "1. No")]
          No = 1,
-        [Display(Name = "2 Occasionally(week)")]
+        [Display(Name = "2. Occasionally(week)")]
         Twice = 2,
-        [Display(Name = "3 Every day")]
+        [Display(Name = "3. Every day")]
         Thrice = 3
 
     }
     public enum E23
     {
-        [Display(Name = " 1 No")]
+        [Display(Name = "1. No")]
         No = 1,
-        [Display(Name = "2 Occasionally")]
+        [Display(Name = "2. Occasionally")]
         Occasionally = 2,
-        [Display(Name = "3 Several times(month)")]
+        [Display(Name = "3. Several times(month)")]
         SeveralTime = 3
 
     }
     public enum E34
     {
-        [Display(Name = " 1 Once")]
+        [Display(Name = "1. Once")]
         Once = 1,
-        [Display(Name = "2 Twice")]
+        [Display(Name = "2. Twice")]
         Twice = 2,
-        [Display(Name = "3 Three or more")]
+        [Display(Name = "3. Three or more")]
         ThreeOrMore = 3
 
     }
     public enum E35
     {
-        [Display(Name = " 1 Plain water")]
+        [Display(Name = "1. Plain water")]
         PlainWater = 1,
-        [Display(Name = "2 Soap")]
+        [Display(Name = "2. Soap")]
         Soap = 2,
-        [Display(Name = "3 Detergent(eg dettol)")]
+        [Display(Name = "3. Detergent(eg dettol)")]
         Detergent = 3,
-        [Display(Name = "4 Others(specify)")]
+        [Display(Name = "4. Others(specify)")]
         Others = 4
 
     }
     public enum E36
     {
-        [Display(Name = "1 Fingers")]
+        [Display(Name = "1. Fingers")]
         Fingers = 1,
-        [Display(Name = "2 Cloth")]
+        [Display(Name = "2. Cloth")]
         Cloth = 2,
-        [Display(Name = "3 Paper(eg toilet paper)")]
+        [Display(Name = "3. Paper(eg toilet paper)")]
         Paper= 3,
-        [Display(Name = "4 Others(specify)")]
+        [Display(Name = "4. Others(specify)")]
         Others = 4
 
     }
@@ -921,9 +925,9 @@ namespace BHMapp.Models
 
     public enum E39
     {
-        [Display(Name = "1 Voluntary")]
+        [Display(Name = "1. Voluntary")]
         Voluntary = 1,
-        [Display(Name = "2 Involuntary")]
+        [Display(Name = "2. Involuntary")]
         Involuntary = 2
         
 
@@ -931,11 +935,11 @@ namespace BHMapp.Models
 
     public enum E42
     {
-        [Display(Name = "0 No")]
+        [Display(Name = "0. No")]
         No = 0,
-        [Display(Name = "1 Yes")]
+        [Display(Name = "1. Yes")]
         Yes = 1,
-        [Display(Name = "2 Occasionaly")]
+        [Display(Name = "2. Occasionaly")]
         Occasionaly = 2
 
 
@@ -944,11 +948,11 @@ namespace BHMapp.Models
     // Questions repeat
     public enum E46
     {
-        [Display(Name = "1 Positive")]
+        [Display(Name = "1. Positive")]
         Positive = 1,
-        [Display(Name = "2 Negative")]
+        [Display(Name = "2. Negative")]
         Negative = 2,
-        [Display(Name = "3 Unknown")]
+        [Display(Name = "3. Unknown")]
         Unknown = 3
 
 
@@ -956,13 +960,13 @@ namespace BHMapp.Models
 
     public enum E47
     {
-        [Display(Name = "1 Positive")]
+        [Display(Name = "1. Positive")]
         Positive = 1,
-        [Display(Name = "2 Negative")]
+        [Display(Name = "2. Negative")]
         Negative = 2,
-        [Display(Name = "3 Unknown (counsel and test)")]
+        [Display(Name = "3. Unknown (counsel and test)")]
         Unknown = 3,
-        [Display(Name = "4 Not tested (counsel and test)")]
+        [Display(Name = "4. Not tested (counsel and test)")]
         Nottested = 4
        
 
@@ -970,41 +974,41 @@ namespace BHMapp.Models
     }
     public enum E54
     {
-        [Display(Name = "a)	When?")]
+        [Display(Name = "a). When?")]
         When_a = 1,
-        [Display(Name = "b)	Before this pregnancy?")]
+        [Display(Name = "b). Before this pregnancy?")]
         BeforePregnancy = 2,
-        [Display(Name = "c)	Are you using drugs for PMTCT of HIV? (write name of the drug")]
+        [Display(Name = "c). Are you using drugs for PMTCT of HIV? (write name of the drug")]
         PMTCTofHIV = 3
     }
 
     public enum E65
     {
-        [Display(Name = "1 Age (years)")]
+        [Display(Name = "1. Age (years)")]
         Age = 1,
-        [Display(Name = "2 I don’t know")]
+        [Display(Name = "2. I don’t know")]
         donknow = 2,
 
     }
     public enum E66
     {
-        [Display(Name = "1 No formal education")]
+        [Display(Name = "1. No formal education")]
         Noeducation = 1,
-        [Display(Name = "2 Primary school")]
+        [Display(Name = "2. Primary school")]
         Primaryschool = 2,
-        [Display(Name = "3 Secondary school")]
+        [Display(Name = "3. Secondary school")]
         Secondaryschool = 3,
-        [Display(Name = "4 Higher education")]
+        [Display(Name = "4. Higher education")]
         HigherEdu = 4,
-        [Display(Name = "5 Certificate or technical education")]
+        [Display(Name = "5. Certificate or technical education")]
         CertificateTechnicalEducation = 5
 
     }
     public enum E68Yes
     {
-        [Display(Name = "1 Week")]
+        [Display(Name = "1. Week")]
         Weekn = 1,
-        [Display(Name = "2 Month")]
+        [Display(Name = "2. Month")]
         Monthn = 2
         
 
@@ -1012,87 +1016,87 @@ namespace BHMapp.Models
     // Questions repeat
     public enum E70
     {
-        [Display(Name = " 1 Local brew")]
+        [Display(Name = "1. Local brew")]
          Localbrew = 1,
-        [Display(Name = "2 Beer")]
+        [Display(Name = "2. Beer")]
         Beer = 2,
-        [Display(Name = "3 Viroba/konyagi")]
+        [Display(Name = "3. Viroba/konyagi")]
         Viroba_konyagi = 3,
-        [Display(Name = "4 Others(specify)")]
+        [Display(Name = "4. Others(specify)")]
         Monthn = 4
 
 
     }
     public enum E74
     {
-        [Display(Name = " 1 One")]
+        [Display(Name = "1. One")]
         One = 1,
-        [Display(Name = "2 Two")]
+        [Display(Name = "2. Two")]
         Two = 2,
-        [Display(Name = "3 Three")]
+        [Display(Name = "3. Three")]
         Three = 3,
-        [Display(Name = "4.	more than three")]
+        [Display(Name = "4. more than three")]
         MoreThree = 4
     }
     // Questions repeat
     public enum E75
     {
-        [Display(Name = "1.None")]
+        [Display(Name = "1. None")]
         None = 1,
-        [Display(Name = "2.Once")]
+        [Display(Name = "2. Once")]
         Once = 2,
-        [Display(Name = "3.Twice")]
+        [Display(Name = "3. Twice")]
         Twice = 3,
-        [Display(Name = "4.Mention")]
+        [Display(Name = "4. Mention")]
         Mention = 4,
-        [Display(Name = "5.Everyday")]
+        [Display(Name = "5. Everyday")]
         Everyday = 5
     }
     public enum E77
     {
-        [Display(Name = "1.No")]
+        [Display(Name = "1. No")]
         No = 1,
-        [Display(Name = "2.Often")]
+        [Display(Name = "2. Often")]
         Often = 2,
-        [Display(Name = "3.Seldom")]
+        [Display(Name = "3. Seldom")]
         Seldom = 3,
-        [Display(Name = "4.Sometimes")]
+        [Display(Name = "4. Sometimes")]
         Sometimes = 4,
     }
 
     public enum E78
     {
-        [Display(Name = "1.Twice")]
+        [Display(Name = "1. Twice")]
         Twice = 1,
-        [Display(Name = "2.Thrice")]
+        [Display(Name = "2. Thrice")]
         Thrice = 2,
-        [Display(Name = "3.Four times")]
+        [Display(Name = "3. Four times")]
         Fourtimes = 3,
-        [Display(Name = "4.Five times ")]
+        [Display(Name = "4. Five times ")]
         Fivetimes = 4
     }
     public enum E83
     {
-        [Display(Name = "0.Dont know")]
+        [Display(Name = "0. Dont know")]
         Dontknoow = 0,
-        [Display(Name = "1.within 1hr")]
+        [Display(Name = "1. within 1hr")]
         within1hr = 1,
-        [Display(Name = "2.after 1hr")]
+        [Display(Name = "2. after 1hr")]
         after1hr = 2,
-        [Display(Name = "3.within 24hrs")]
+        [Display(Name = "3. within 24hrs")]
         within24hrs = 3,
-        [Display(Name = "4.after 24hrs")]
+        [Display(Name = "4. after 24hrs")]
         after24hrs = 4
     }
     public enum E84
     {
-        [Display(Name = "1.To feed the child mothers milk only without mixing with anything else for the first 6 months of life.")]
+        [Display(Name = "1. To feed the child mothers milk only without mixing with anything else for the first 6 months of life.")]
         MonthLife = 1,
-        [Display(Name = "2.To feed water and breastmilk")]
+        [Display(Name = "2. To feed water and breastmilk")]
         WaterandBreastmilk = 2,
-        [Display(Name = "3.To give breastmilk and infant formula")]
+        [Display(Name = "3. To give breastmilk and infant formula")]
         BreastmilkandInfant = 3,
-        [Display(Name = "4.Others")]
+        [Display(Name = "4. Others")]
         within24hrs = 4,
         
     }
@@ -1100,62 +1104,62 @@ namespace BHMapp.Models
     // Questions repeat
     public enum E85
     {
-        [Display(Name = "0.Don’t know")]
+        [Display(Name = "0. Don’t know")]
         Dontknow = 0,
-        [Display(Name = "1.Month")]
+        [Display(Name = "1. Month")]
         Monthn = 1
        
 
     }
     public enum E87
     {
-        [Display(Name = "0.Don’t know")]
+        [Display(Name = "0. Don’t know")]
         Dontknow = 0,
-        [Display(Name = "1.Years")]
+        [Display(Name = "1. Years")]
         Monthn = 1
 
 
     }
     public enum E90
     {
-        [Display(Name = "1.She will infect her child")]
+        [Display(Name = "1. She will infect her child")]
         InfectHerChild = 1,
-        [Display(Name = "2.HIV positive mother is not allowed to breastfeed")]
+        [Display(Name = "2. HIV positive mother is not allowed to breastfeed")]
         HIVPositiveMother = 2,
-        [Display(Name = "3.Don’t Know")]
+        [Display(Name = "3. Don’t Know")]
         Dontknow = 3,
-        [Display(Name = "4.Others")]
+        [Display(Name = "4. Others")]
         Monthn = 4
     }
     public enum E92
     {
-        [Display(Name = "1.not good for the baby")]
+        [Display(Name = "1. not good for the baby")]
         GoodBaby = 1,
-        [Display(Name = "2.they are dirty")]
+        [Display(Name = "2. they are dirty")]
         Dirty = 2,
-        [Display(Name = "3.not important to the child")]
+        [Display(Name = "3. not important to the child")]
         TheChild = 3,
-        [Display(Name = "4.Others")]
+        [Display(Name = "4. Others")]
         Others = 4
     }
     public enum E93
     {
-        [Display(Name = "1.Its good for the health of the child")]
+        [Display(Name = "1. Its good for the health of the child")]
         GoodChild = 1,
-        [Display(Name = "2.We were told in the clinic")]
+        [Display(Name = "2. We were told in the clinic")]
         TheClinic = 2,
-        [Display(Name = "3.Others")]
+        [Display(Name = "3. Others")]
         Others = 3
     }
     public enum E94
     {
-        [Display(Name = "1.Poor positioning")]
+        [Display(Name = "1. Poor positioning")]
         PoorPositioning = 1,
-        [Display(Name = "2.Diseases")]
+        [Display(Name = "2. Diseases")]
         Diseases = 2,
-        [Display(Name = "3.Don’t know")]
+        [Display(Name = "3. Don’t know")]
         Dontknow = 3,
-        [Display(Name = "4.Others")]
+        [Display(Name = "4. Others")]
         Others = 4
 
             
@@ -1163,23 +1167,24 @@ namespace BHMapp.Models
     }
     public enum E95
     {
-        [Display(Name = "1.EBF")]
+        [Display(Name = "1. EBF")]
         EBF = 1,
-        [Display(Name = "2.Infant formula")]
+        [Display(Name = "2. Infant formula")]
         InfantFormula = 2,
-        [Display(Name = "3.Cow’s Milk")]
+        [Display(Name = "3. Cow’s Milk")]
         CowMilk = 3,
-        [Display(Name = "4.Mixed feeding(breast milk and other milk)")]
+        [Display(Name = "4. Mixed feeding(breast milk and other milk)")]
         OtherMilk = 4
     }
     public enum E103
     {
-        [Display(Name = "1.Negative")]
+        [Display(Name = "1. Negative")]
         Negative = 1,
-        [Display(Name = "2.Positive")]
+        [Display(Name = "2. Positive")]
         Positive = 2
         
     }
 
 
+}
 }
