@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BHMapp.Migrations
 {
     [DbContext(typeof(BHMContext))]
-    [Migration("20201010103021_BM2020")]
-    partial class BM2020
+    [Migration("20201015143740_BH2020")]
+    partial class BH2020
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,10 +30,10 @@ namespace BHMapp.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("DateMenstruation")
+                    b.Property<DateTime?>("DateMenstruation")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("ExpectedDate")
+                    b.Property<DateTime?>("ExpectedDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("GestationalAge")
@@ -141,10 +141,10 @@ namespace BHMapp.Migrations
                     b.Property<bool>("Q100_4_5")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("Q100_5_1")
+                    b.Property<int>("Q100_5_1")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("Q100_6_1")
+                    b.Property<int>("Q100_6_1")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("Q101_1")
@@ -234,16 +234,16 @@ namespace BHMapp.Migrations
                     b.Property<uint>("Q24")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q25")
+                    b.Property<int?>("Q25")
                         .HasColumnType("INTEGER");
 
                     b.Property<uint?>("Q26")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q27")
+                    b.Property<int?>("Q27")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q28")
+                    b.Property<int?>("Q28")
                         .HasColumnType("INTEGER");
 
                     b.Property<uint?>("Q29")
@@ -255,10 +255,10 @@ namespace BHMapp.Migrations
                     b.Property<uint?>("Q30")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q31")
+                    b.Property<int?>("Q31")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q32")
+                    b.Property<int?>("Q32")
                         .HasColumnType("INTEGER");
 
                     b.Property<uint?>("Q32_1")
@@ -267,13 +267,13 @@ namespace BHMapp.Migrations
                     b.Property<int>("Q33")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q34")
+                    b.Property<int?>("Q34")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q35")
+                    b.Property<int?>("Q35")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q36")
+                    b.Property<int?>("Q36")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Q37")
@@ -318,10 +318,10 @@ namespace BHMapp.Migrations
                     b.Property<int>("Q44")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q45")
+                    b.Property<int?>("Q45")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q46")
+                    b.Property<int?>("Q46")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Q47")
@@ -348,10 +348,10 @@ namespace BHMapp.Migrations
                     b.Property<int>("Q53")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q54")
+                    b.Property<int?>("Q54")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("Q54_1")
+                    b.Property<DateTime?>("Q54_1")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("Q54_2")
@@ -363,7 +363,7 @@ namespace BHMapp.Migrations
                     b.Property<int>("Q55")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q56")
+                    b.Property<int?>("Q56")
                         .HasColumnType("INTEGER");
 
                     b.Property<bool>("Q56_1")
@@ -411,13 +411,13 @@ namespace BHMapp.Migrations
                     b.Property<bool>("Q59_6")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q6")
+                    b.Property<int?>("Q6")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Q60")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("Q60_1")
+                    b.Property<DateTime?>("Q60_1")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Q60_2")
@@ -477,7 +477,7 @@ namespace BHMapp.Migrations
                     b.Property<int>("Q68")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q68Yes")
+                    b.Property<int?>("Q68Yes")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Q69")
@@ -576,37 +576,31 @@ namespace BHMapp.Migrations
                     b.Property<int>("Q85")
                         .HasColumnType("INTEGER");
 
-                    b.Property<uint?>("Q85_1")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("Q86")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<uint?>("Q86_1")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Q87")
                         .HasColumnType("INTEGER");
 
-                    b.Property<uint?>("Q87_1")
+                    b.Property<int>("Q88")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q88")
+                    b.Property<int?>("Q89")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Q9")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q90")
+                    b.Property<int?>("Q90")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Q91")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q92")
+                    b.Property<int?>("Q92")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Q93")
+                    b.Property<int?>("Q93")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Q94")
@@ -618,8 +612,8 @@ namespace BHMapp.Migrations
                     b.Property<uint?>("Q96")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Q97")
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Q97")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("Q98_1")
                         .HasColumnType("INTEGER");

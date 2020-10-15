@@ -88,7 +88,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q3" class="text-danger"></span>
             </div>
-            <div class="col-md-3" id="nOthersQ3">
+            <div class="col-md-3" >
                 <label asp-for="Bhamc.OthersQ3" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ3" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ3" class="text-danger"></span>
@@ -1329,11 +1329,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q85" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q85_1" class="control-label"></label>
-                <input asp-for="Bhamc.Q85_1" class="form-control" />
-                <span asp-validation-for="Bhamc.Q85_1" class="text-danger"></span>
-            </div>
+           
             <div class="col-md-5">
                 <label asp-for="Bhamc.Q86" class="control-label"></label>
                 <select asp-for="Bhamc.Q86" class="form-control"
@@ -1342,11 +1338,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q86" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q86_1" class="control-label"></label>
-                <input asp-for="Bhamc.Q86_1" class="form-control" />
-                <span asp-validation-for="Bhamc.Q86_1" class="text-danger"></span>
-            </div>
+            
             <div class="col-md-6">
                 <label asp-for="Bhamc.Q87" class="control-label"></label>
                 <select asp-for="Bhamc.Q87" class="form-control"
@@ -1355,11 +1347,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q87" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q87_1" class="control-label"></label>
-                <input asp-for="Bhamc.Q87_1" class="form-control" />
-                <span asp-validation-for="Bhamc.Q87_1" class="text-danger"></span>
-            </div>
+           
             <div class="col-md-6">
                 <label asp-for="Bhamc.Q88" class="control-label"></label>
                 <select asp-for="Bhamc.Q88" class="form-control"
@@ -1376,7 +1364,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q90" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" >
                 <label asp-for="Bhamc.OthersQ90" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ90" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ90" class="text-danger"></span>
@@ -1795,17 +1783,5 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
    
-    <script type="text/javascript">
-
-        $(document).on("change", "#nQ3", function () {
-            if ($(this).val() == '4') {
-
-                $("#nOthersQ3").removeClass('collapse');
-            }
-            else {
-                $("#nOthersQ3").addClass('collapse');
-
-            }
-        });
-    </script>
+    
 }

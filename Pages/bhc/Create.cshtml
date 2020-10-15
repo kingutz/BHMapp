@@ -10,11 +10,11 @@
 @*<div class="row">*@
     @*<div class="col-md-3">*@
 <form method="post">
-    <div class="row text-muted justify-content-between">
+    <div class="row text-white justify-content-between">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @*<input type="hidden" asp-for="Bhamc.ID" />*@
-        <div class="row  jumbotron">
-            <div class="col-md-12" style="background-color:black">
+        <div class="row jumbodm">
+            <div class="col-md-12 text-info">
                 <h5>GENERAL INFORMATION</h5>
             </div>
             <div class="col-md-2">
@@ -54,7 +54,13 @@
             </div>
             <div class="col-md-2">
                 <label asp-for="Bhamc.HospitalName" class="control-label"></label>
-                <input asp-for="Bhamc.HospitalName" class="form-control" />
+                @*<input asp-for="Bhamc.HospitalName" class="form-control" />*@
+                <select asp-for="Bhamc.HospitalName" class="form-control">
+                    <option value=""></option>
+                    <option>Majengo</option>
+                    <option>Pasua </option>
+                   
+                </select>
                 <span asp-validation-for="Bhamc.HospitalName" class="text-danger"></span>
             </div>
             <div class="col-md-5">
@@ -66,8 +72,8 @@
 
         </div>
         @*..........SOCIO-DEMOGRAPHIC CHARACTERISTICS.....*@
-        <div class="row jumbotron">
-            <div class="col-md-12" style="background-color:black">
+        <div class="row jumbodm">
+            <div class="col-md-12 text-info">
                 <h5>SOCIO-DEMOGRAPHIC CHARACTERISTICS</h5>
             </div>
             <div class="col-md-3">
@@ -82,39 +88,39 @@
             </div>
             <div class="col-md-3">
                 <label asp-for="Bhamc.Q3" class="control-label"></label>
-                <select asp-for="Bhamc.Q3" class="form-control"
+                <select asp-for="Bhamc.Q3" id="nQ3" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E3>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q3" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nOthersQ3">
                 <label asp-for="Bhamc.OthersQ3" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ3" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ3" class="text-danger"></span>
             </div>
             <div class="col-md-3">
                 <label asp-for="Bhamc.Q4" class="control-label"></label>
-                <select asp-for="Bhamc.Q4" class="form-control"
+                <select asp-for="Bhamc.Q4" id="nQ4" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E4>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q4" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nOthersQ4">
                 <label asp-for="Bhamc.OthersQ4" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ4" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ4" class="text-danger"></span>
             </div>
             <div class="col-md-2">
                 <label asp-for="Bhamc.Q5" class="control-label"></label>
-                <select asp-for="Bhamc.Q5" class="form-control"
+                <select asp-for="Bhamc.Q5" id="nQ5" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E5>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q5" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ6">
                 <label asp-for="Bhamc.Q6" class="control-label"></label>
                 <select asp-for="Bhamc.Q6" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E6>()">
@@ -122,7 +128,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q6" class="text-danger"></span>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="nQ7">
                 <label asp-for="Bhamc.Q7" class="control-label"></label>
                 <input asp-for="Bhamc.Q7" class="form-control" />
                 <span asp-validation-for="Bhamc.Q7" class="text-danger"></span>
@@ -145,13 +151,13 @@
             </div>
             <div class="col-md-4">
                 <label asp-for="Bhamc.Q10" class="control-label"></label>
-                <select asp-for="Bhamc.Q10" class="form-control"
+                <select asp-for="Bhamc.Q10" id="nQ10" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E10>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q10" class="text-danger"></span>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 collapse" id="nOthersQ10">
                 <label asp-for="Bhamc.OthersQ10" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ10" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ10" class="text-danger"></span>
@@ -162,8 +168,8 @@
                 <span asp-validation-for="Bhamc.Q11" class="text-danger"></span>
             </div>
 
-            <div class="col-md-4 text-primary">
-                <p> Do you own the following?</p>
+            <div class="col-md-4">
+                <p>Q12. Do you own the following?</p>
                 <div class="row">
                     <div class="col-md-12 ">
                         <div class="row">
@@ -221,31 +227,31 @@
 
             <div class="col-md-3">
                 <label asp-for="Bhamc.Q13" class="control-label"></label>
-                <select asp-for="Bhamc.Q13" class="form-control"
+                <select asp-for="Bhamc.Q13" id="nQ13" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E13>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q13" class="text-danger"></span>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 collapse" id="nOthersQ13">
                 <label asp-for="Bhamc.OthersQ13" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ13" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ13" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ14">
                 <label asp-for="Bhamc.Q14" class="control-label"></label>
                 <input asp-for="Bhamc.Q14" class="form-control" />
                 <span asp-validation-for="Bhamc.Q14" class="text-danger"></span>
             </div>
             <div class="col-md-3">
                 <label asp-for="Bhamc.Q15" class="control-label"></label>
-                <select asp-for="Bhamc.Q15" class="form-control"
+                <select asp-for="Bhamc.Q15" id="nQ15" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E15>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q15" class="text-danger"></span>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 collapse" id="nOthersQ15">
                 <label asp-for="Bhamc.OthersQ15" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ15" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ15" class="text-danger"></span>
@@ -268,13 +274,13 @@
             </div>
             <div class="col-md-4">
                 <label asp-for="Bhamc.Q18" class="control-label"></label>
-                <select asp-for="Bhamc.Q18" class="form-control"
+                <select asp-for="Bhamc.Q18" id="nQ18" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E18>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q18" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nOthersQ18">
                 <label asp-for="Bhamc.OthersQ18" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ18" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ18" class="text-danger"></span>
@@ -289,27 +295,27 @@
             </div>
             <div class="col-md-5">
                 <label asp-for="Bhamc.Q20" class="control-label"></label>
-                <select asp-for="Bhamc.Q20" class="form-control"
+                <select asp-for="Bhamc.Q20" id="nQ20" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E20>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q20" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nOthersQ20">
                 <label asp-for="Bhamc.OthersQ20" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ20" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ20" class="text-danger"></span>
             </div>
             <div class="col-md-4">
                 <label asp-for="Bhamc.Q21" class="control-label"></label>
-                <select asp-for="Bhamc.Q21" class="form-control"
+                <select asp-for="Bhamc.Q21" id="nQ21" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E21>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q21" class="text-danger"></span>
             </div>
 
-            <div class="col-md-4 text-primary">
+            <div class="col-md-4" id="nQ22">
                 <p>Q22. Of what kind?</p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -349,7 +355,7 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nOthersQ22_4">
                 <label asp-for="Bhamc.OthersQ22_4" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ22_4" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ22_4" class="text-danger"></span>
@@ -365,16 +371,16 @@
         </div>
 
         @*......REPRODUCTIVE HEALTH........*@
-        <div class="row jumbotron">
-            <div class="col-md-12" style="background-color:black">
+        <div class="row jumbodm">
+            <div class="col-md-12 text-info">
                 <h5>REPRODUCTIVE HEALTH</h5>
             </div>
             <div class="col-md-2">
                 <label asp-for="Bhamc.Q24" class="control-label"></label>
-                <input asp-for="Bhamc.Q24" class="form-control" />
+                <input asp-for="Bhamc.Q24" id="nQ24" class="form-control" />
                 <span asp-validation-for="Bhamc.Q24" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ25">
                 <label asp-for="Bhamc.Q25" class="control-label"></label>
                 <select asp-for="Bhamc.Q25" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
@@ -382,12 +388,12 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q25" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" id="nQ26">
                 <label asp-for="Bhamc.Q26" class="control-label"></label>
                 <input asp-for="Bhamc.Q26" class="form-control" />
                 <span asp-validation-for="Bhamc.Q26" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" id="nQ27">
                 <label asp-for="Bhamc.Q27" class="control-label"></label>
                 <select asp-for="Bhamc.Q27" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
@@ -395,7 +401,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q27" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ28">
                 <label asp-for="Bhamc.Q28" class="control-label"></label>
                 <select asp-for="Bhamc.Q28" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
@@ -403,17 +409,17 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q28" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ29">
                 <label asp-for="Bhamc.Q29" class="control-label"></label>
                 <input asp-for="Bhamc.Q29" class="form-control" />
                 <span asp-validation-for="Bhamc.Q29" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ30">
                 <label asp-for="Bhamc.Q30" class="control-label"></label>
                 <input asp-for="Bhamc.Q30" class="form-control" />
                 <span asp-validation-for="Bhamc.Q30" class="text-danger"></span>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="nQ31">
                 <label asp-for="Bhamc.Q31" class="control-label"></label>
                 <select asp-for="Bhamc.Q31" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
@@ -421,7 +427,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q31" class="text-danger"></span>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="nQ32">
                 <label asp-for="Bhamc.Q32" class="control-label"></label>
                 <select asp-for="Bhamc.Q32" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
@@ -429,20 +435,20 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q32" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nQ32_1">
                 <label asp-for="Bhamc.Q32_1" class="control-label"></label>
                 <input asp-for="Bhamc.Q32_1" class="form-control" />
                 <span asp-validation-for="Bhamc.Q32_1" class="text-danger"></span>
             </div>
             <div class="col-md-9">
                 <label asp-for="Bhamc.Q33" class="control-label"></label>
-                <select asp-for="Bhamc.Q33" class="form-control"
+                <select asp-for="Bhamc.Q33" id="nQ33" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q33" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ34">
                 <label asp-for="Bhamc.Q34" class="control-label"></label>
                 <select asp-for="Bhamc.Q34" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E34>()">
@@ -450,33 +456,33 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q34" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ35">
                 <label asp-for="Bhamc.Q35" class="control-label"></label>
-                <select asp-for="Bhamc.Q35" class="form-control"
+                <select asp-for="Bhamc.Q35" id="nnQ35" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E35>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q35" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 collapse" id="nOthersQ35">
                 <label asp-for="Bhamc.OthersQ35" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ35" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ35" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="nQ36">
                 <label asp-for="Bhamc.Q36" class="control-label"></label>
-                <select asp-for="Bhamc.Q36" class="form-control"
+                <select asp-for="Bhamc.Q36" id="nnQ36" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E36>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q35" class="text-danger"></span>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2 collapse" id="nOthersQ36">
                 <label asp-for="Bhamc.OthersQ36" class="control-label"></label>
                 <input asp-for="Bhamc.Q36" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ36" class="text-danger"></span>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="nQ37">
                 <label asp-for="Bhamc.Q37" class="control-label"></label>
                 <input asp-for="Bhamc.Q37" class="form-control" />
                 <span asp-validation-for="Bhamc.Q37" class="text-danger"></span>
@@ -484,8 +490,8 @@
         </div>
 
         @*............INFORMATION ON PARTNER AND INFECTIOUS DISEASE...........*@
-        <div class="row jumbotron">
-            <div class="col-md-12" style="background-color:black">
+        <div class="row jumbodm">
+            <div class="col-md-12 text-info">
                 <h5>INFORMATION ON PARTNER AND INFECTIOUS DISEASE</h5>
             </div>
             <div class="col-md-2">
@@ -520,7 +526,7 @@
                 <span asp-validation-for="Bhamc.Q42" class="text-danger"></span>
             </div>
 
-            <div class="col-md-6 text-primary">
+            <div class="col-md-6">
                 <p>Q43 Have you been treated or got the following symptoms in the past 12 months?</p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -576,8 +582,8 @@
 
         @*............HIV AND SYPHILIS TESTING AND PARTNER’S DISCLOSURE..........*@
 
-        <div class="row jumbotron">
-            <div class="col-md-12" style="background-color:black">
+        <div class="row jumbodm">
+            <div class="col-md-12 text-info">
                 <h5>HIV AND SYPHILIS TESTING AND PARTNER’S DISCLOSURE</h5>
             </div>
             <div class="col-md-3">
@@ -588,7 +594,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q44" class="text-danger"></span>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="nQ45">
                 <label asp-for="Bhamc.Q45" class="control-label"></label>
                 <select asp-for="Bhamc.Q45" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
@@ -596,7 +602,7 @@
                 </select>
                 <span asp-validation-for="Bhamc.Q45" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" id="nQ46">
                 <label asp-for="Bhamc.Q46" class="control-label"></label>
                 <select asp-for="Bhamc.Q46" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E46>()">
@@ -688,7 +694,7 @@
                 <span asp-validation-for="Bhamc.Q56" class="text-danger"></span>
             </div>
 
-            <div class="col-md-6 text-primary">
+            <div class="col-md-6">
                 <p>Q57. Can you discuss issues regarding HIV/AIDS with(tick the appropriate)</p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -735,14 +741,14 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nOthersQ56">
                 <label asp-for="Bhamc.OthersQ56" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ56" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ56" class="text-danger"></span>
             </div>
 
 
-            <div class="col-md-8 text-primary">
+            <div class="col-md-8">
                 <p>Q58. Have you ever discussed with your partner about matter relating to (tick were appropriate)</p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -785,7 +791,7 @@
             </div>
 
 
-            <div class="col-md-8 text-primary">
+            <div class="col-md-8">
                 <p>Q59. Do you have any of the following symptoms? </p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -842,29 +848,29 @@
 
             <div class="col-md-6">
                 <label asp-for="Bhamc.Q60" class="control-label"></label>
-                <select asp-for="Bhamc.Q60" class="form-control"
+                <select asp-for="Bhamc.Q60" id="nQ60" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q60" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nQ60_1">
                 <label asp-for="Bhamc.Q60_1" class="control-label"></label>
                 <input asp-for="Bhamc.Q60_1" class="form-control" />
                 <span asp-validation-for="Bhamc.Q60_1" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nQ60_2">
                 <label asp-for="Bhamc.Q60_2" class="control-label"></label>
                 <input asp-for="Bhamc.Q60_2" class="form-control" />
                 <span asp-validation-for="Bhamc.Q60_2" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nQ60_3">
                 <label asp-for="Bhamc.Q60_3" class="control-label"></label>
                 <input asp-for="Bhamc.Q60_3" class="form-control" />
                 <span asp-validation-for="Bhamc.Q60_3" class="text-danger"></span>
             </div>
 
-            <div class="col-md-6 text-primary">
+            <div class="col-md-6">
                 <p>Q61. What symptoms have you been treated? </p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -920,13 +926,13 @@
 
             <div class="col-md-8">
                 <label asp-for="Bhamc.Q62" class="control-label"></label>
-                <select asp-for="Bhamc.Q62" class="form-control"
+                <select asp-for="Bhamc.Q62" id="nQ62" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q62" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 collapse" id="nQ63">
                 <label asp-for="Bhamc.Q63" class="control-label"></label>
                 <input asp-for="Bhamc.Q63" class="form-control" />
                 <span asp-validation-for="Bhamc.Q63" class="text-danger"></span>
@@ -934,7 +940,7 @@
 
 
 
-            <div class="col-md-6 text-primary">
+            <div class="col-md-6">
                 <p>Q64. Who else would you tell that you have STI apart from your partner? </p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -983,8 +989,8 @@
         </div>
 
         @*.............PARTNER’S INFORMATION............*@
-        <div class="row jumbotron">
-            <div class="col-md-12" style="background-color:black">
+        <div class="row jumbodm">
+            <div class="col-md-12 text-info">
                 <h5>PARTNER’S INFORMATION</h5>
             </div>
             <div class="col-md-3">
@@ -1003,26 +1009,26 @@
 
             <div class="col-md-3">
                 <label asp-for="Bhamc.Q67" class="control-label"></label>
-                <select asp-for="Bhamc.Q67" class="form-control"
+                <select asp-for="Bhamc.Q67" id="nQ67" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E10>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q67" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nOthersQ67">
                 <label asp-for="Bhamc.OthersQ67" class="control-label"></label>
                 <input asp-for="Bhamc.OthersQ67" class="form-control" />
                 <span asp-validation-for="Bhamc.OthersQ67" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label asp-for="Bhamc.Q68" class="control-label"></label>
-                <select asp-for="Bhamc.Q68" class="form-control"
+                <select asp-for="Bhamc.Q68" id="nQ68" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q68" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 collapse" id="nQ68Yes">
                 <label asp-for="Bhamc.Q68Yes" class="control-label"></label>
                 <select asp-for="Bhamc.Q68Yes" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E68Yes>()">
@@ -1047,7 +1053,7 @@
 
 
             </div>*@
-            <div class="col-md-4 text-primary">
+            <div class="col-md-4">
                 <p>Q70. Of what kind?</p>
                 <div class="row">
                     <div class="col-md-12 ">
@@ -1089,19 +1095,19 @@
 
         </div>
         @*........MOTHER’S DIET DURING PREGNANCY....*@
-        <div class="row jumbotron">
-            <div class="col-md-12" style="background-color:black">
+        <div class="row jumbodm">
+            <div class="col-md-12 text-info">
                 <h5>MOTHER’S DIET DURING PREGNANCY</h5>
             </div>
             <div class="col-md-8">
                 <label asp-for="Bhamc.Q71" class="control-label"></label>
-                <select asp-for="Bhamc.Q71" class="form-control"
+                <select asp-for="Bhamc.Q71" id="nQ71" class="form-control"
                         asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
                     <option selected="selected" value=""></option>
                 </select>
                 <span asp-validation-for="Bhamc.Q71" class="text-danger"></span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 collapse" id="nQ71_1">
                 <label asp-for="Bhamc.Q71_1" class="control-label"></label>
                 <input asp-for="Bhamc.Q71_1" class="form-control" />
                 <span asp-validation-for="Bhamc.Q71_1" class="text-danger"></span>
@@ -1169,629 +1175,943 @@
             </div>
         </div>
         @*...........INFANT FEEDING INFORMATION..........*@
-        <div class="row jumbotron">
-            <div class="col-md-12" style="background-color:black">
-                <h5>INFANT FEEDING INFORMATION</h5>
-            </div>
-            <div class="col-md-5">
-                <label asp-for="Bhamc.Q80" class="control-label"></label>
-                <select asp-for="Bhamc.Q80" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q80" class="text-danger"></span>
-            </div>
-            @*<div class="col-md-7">
-                <p>Q81. If Yes, what kind of counselling did you receive</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q81_1) <input asp-for="Bhamc.Q81_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q81_2) <input asp-for="Bhamc.Q81_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q81_3) <input asp-for="Bhamc.Q81_3" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q81_4) <input asp-for="Bhamc.Q81_4" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q81_5) <input asp-for="Bhamc.Q81_5" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q81_6) <input asp-for="Bhamc.Q81_6" />
-
-
-            </div>*@
-            <div class="col-md-6 text-primary">
-                <p>Q81. If Yes, what kind of counselling did you receive</p>
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="row">
-                            <div class="col-md-6">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q81_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q81_1" />
-                            </div>
-                            <div class="col-md-4">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q81_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q81_2" />
-                            </div>
-                            <div class="col-md-6">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q81_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q81_3" />
-                            </div>
-                            <div class="col-md-4">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q81_4)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q81_4" />
-                            </div>
-                            <div class="col-md-6">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q81_5)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q81_5" />
-                            </div>
-                            <div class="col-md-4">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q81_6)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q81_6" />
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-            @*</div>*@
-            @*<div class="col-md-12">
-                <p>Q82. Where else have you heard about breast feeding and infant feeding?</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q82_1) <input asp-for="Bhamc.Q82_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q82_2) <input asp-for="Bhamc.Q82_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q82_3) <input asp-for="Bhamc.Q82_3" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q82_4) <input asp-for="Bhamc.Q82_4" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q82_5) <input asp-for="Bhamc.Q82_5" />
-
-
-
-            </div>*@
-            <div class="col-md-7 text-primary">
-                <p>Q82. Where else have you heard about breast feeding and infant feeding?</p>
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="row">
-                            <div class="col-md-5">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q82_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q82_1" />
-                            </div>
-                            <div class="col-md-5">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q82_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q82_2" />
-                            </div>
-                            <div class="col-md-5">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q82_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q82_3" />
-                            </div>
-                            <div class="col-md-5">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q82_4)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q82_4" />
-                            </div>
-                            <div class="col-md-5">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q82_5)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q82_5" />
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="col-md-5">
-                <label asp-for="Bhamc.Q83" class="control-label"></label>
-                <select asp-for="Bhamc.Q83" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E83>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q83" class="text-danger"></span>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="Bhamc.Q84" class="control-label"></label>
-                <select asp-for="Bhamc.Q84" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E84>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q84" class="text-danger"></span>
-            </div>
-            <div class="col-md-4">
-                <label asp-for="Bhamc.Q85" class="control-label"></label>
-                <select asp-for="Bhamc.Q85" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E85>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q85" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q85_1" class="control-label"></label>
-                <input asp-for="Bhamc.Q85_1" class="form-control" />
-                <span asp-validation-for="Bhamc.Q85_1" class="text-danger"></span>
-            </div>
-            <div class="col-md-5">
-                <label asp-for="Bhamc.Q86" class="control-label"></label>
-                <select asp-for="Bhamc.Q86" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E85>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q86" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q86_1" class="control-label"></label>
-                <input asp-for="Bhamc.Q86_1" class="form-control" />
-                <span asp-validation-for="Bhamc.Q86_1" class="text-danger"></span>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="Bhamc.Q87" class="control-label"></label>
-                <select asp-for="Bhamc.Q87" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E87>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q87" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q87_1" class="control-label"></label>
-                <input asp-for="Bhamc.Q87_1" class="form-control" />
-                <span asp-validation-for="Bhamc.Q87_1" class="text-danger"></span>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="Bhamc.Q88" class="control-label"></label>
-                <select asp-for="Bhamc.Q88" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q88" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q90" class="control-label"></label>
-                <select asp-for="Bhamc.Q90" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E90>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q90" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.OthersQ90" class="control-label"></label>
-                <input asp-for="Bhamc.OthersQ90" class="form-control" />
-                <span asp-validation-for="Bhamc.OthersQ90" class="text-danger"></span>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="Bhamc.Q91" class="control-label"></label>
-                <select asp-for="Bhamc.Q91" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q91" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q92" class="control-label"></label>
-                <select asp-for="Bhamc.Q92" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E92>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q92" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.OthersQ92" class="control-label"></label>
-                <input asp-for="Bhamc.OthersQ92" class="form-control" />
-                <span asp-validation-for="Bhamc.OthersQ92" class="text-danger"></span>
-            </div>
-            <div class="col-md-2">
-                <label asp-for="Bhamc.Q93" class="control-label"></label>
-                <select asp-for="Bhamc.Q93" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E93>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q93" class="text-danger"></span>
-            </div>
-            <div class="col-md-4">
-                <label asp-for="Bhamc.Q94" class="control-label"></label>
-                <select asp-for="Bhamc.Q94" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E94>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q94" class="text-danger"></span>
-            </div>
-            <div class="col-md-6">
-                <label asp-for="Bhamc.Q95" class="control-label"></label>
-                <select asp-for="Bhamc.Q95" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E95>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q95" class="text-danger"></span>
-            </div>
-            <div class="col-md-7">
-                <label asp-for="Bhamc.Q96" class="control-label"></label>
-                <input asp-for="Bhamc.Q96" class="form-control" />
-                <span asp-validation-for="Bhamc.Q96" class="text-danger"></span>
-            </div>
-            <div class="col-md-5">
-                <label asp-for="Bhamc.Q97" class="control-label"></label>
-                <input asp-for="Bhamc.Q97" class="form-control" />
-                <span asp-validation-for="Bhamc.Q97" class="text-danger"></span>
-            </div>
-            @*<div class="col-md-12">
-                <p>Q98. External genitalia (tick where appropriate)</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q98_1) <input asp-for="Bhamc.Q98_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q98_2) <input asp-for="Bhamc.Q98_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q98_4) <input asp-for="Bhamc.Q98_4" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q98_5) <input asp-for="Bhamc.Q98_5" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q98_6) <input asp-for="Bhamc.Q98_6" />
-
-
-
-            </div>*@
-            <div class="col-md-8 text-primary">
-                <p>Q98. External genitalia (tick where appropriate)</p>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q98_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q98_1" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q98_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q98_2" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q98_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q98_3" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q98_4)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q98_4" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q98_5)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q98_5" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q98_5)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q98_6" />
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-            @*<div class="col-md-12">
-                <p>Q99. Internal genitalia (tick where appropriate)</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q99_1) <input asp-for="Bhamc.Q99_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q99_2) <input asp-for="Bhamc.Q99_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q99_4) <input asp-for="Bhamc.Q99_4" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q99_5) <input asp-for="Bhamc.Q99_5" />
-            </div>*@
-            <div class="col-md-8 text-primary">
-                <p>Q99. Internal genitalia (tick where appropriate)</p>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q99_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q99_1" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q99_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q99_2" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q99_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q99_3" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q99_4)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q99_4" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q99_5)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q99_5" />
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-            <div class="col-md-12 text-primary">
-                <p>Q100. Vaginal secretion (tick where appropriate)</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_1_1) <input asp-for="Bhamc.Q100_1_1" />
-            </div>
-            @*<div class="col-md-12">
-                <p>1.Normal</p>
-                <input asp-for="Bhamc.Q100_1_1" />
-                Html.DisplayNameFor(model => model.Bhamc.Q100_1_1) <input asp-for="Bhamc.Q100_1_1" />
-            </div>*@
-            @*<div class="col-md-12">
-                <p>2.Amount</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_2_1) <input asp-for="Bhamc.Q100_2_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_2_2) <input asp-for="Bhamc.Q100_2_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_2_3) <input asp-for="Bhamc.Q100_2_3" />
-            </div>*@
-
-            <div class="col-md-6 text-primary">
-                <p>Q100. Vaginal secretion (tick where appropriate)</p>
-                <p class="text-info">2.Amount</p>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_2_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_2_1" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_2_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_2_2" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_2_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_2_3" />
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-            @*<div class="col-md-12">
-                <p>3.Colour </p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_1) <input asp-for="Bhamc.Q100_3_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_1) <input asp-for="Bhamc.Q100_3_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_2) <input asp-for="Bhamc.Q100_3_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_3) <input asp-for="Bhamc.Q100_3_3" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_4) <input asp-for="Bhamc.Q100_3_4" />
-
-            </div>*@
-            <div class="col-md-12 text-primary">
-                <p>Q100. Vaginal secretion (tick where appropriate)</p>
-                <p class="text-info">3.Colour </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_3_1" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_3_2" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_3_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_3_3" />
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-            @*<div class="col-md-12">
-                <p>4.Consistency </p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_1) <input asp-for="Bhamc.Q100_4_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_1) <input asp-for="Bhamc.Q100_4_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_2) <input asp-for="Bhamc.Q100_4_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_3) <input asp-for="Bhamc.Q100_4_3" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_4) <input asp-for="Bhamc.Q100_4_4" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_5) <input asp-for="Bhamc.Q100_4_5" />
-            </div>*@
-            <div class="col-md-12 text-primary">
-                <p>Q100. Vaginal secretion (tick where appropriate)</p>
-                <p class="text-info">4.Consistency </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_4_1" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_4_2" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_4_3" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_4)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_4_4" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q100_4_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q100_4_5" />
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-            <div class="col-md-12 text-primary">
-                <p>Q100. Vaginal secretion (tick where appropriate)</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_5_1) <input asp-for="Bhamc.Q100_5_1" />
-            </div>
-            <!--<div class="col-md-12">
-        <p>5.Coating of vaginal walls </p>
-        <input asp-for="Bhamc.Q100_5_1" />-->
-            @*@Html.DisplayNameFor(model => model.Bhamc.Q100_5_1) <input asp-for="Bhamc.Q100_5_1" />*@
-
-            <!--</div>-->
-
-            <div class="col-md-12 text-primary">
-                <p>Q100. Vaginal secretion (tick where appropriate)</p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q100_6_1) <input asp-for="Bhamc.Q100_6_1" />
-            </div>
-
-            @*<div class="col-md-12">
-                <p>4.Consistency </p>
-                @Html.DisplayNameFor(model => model.Bhamc.Q101_1) <input asp-for="Bhamc.Q101_1" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q101_2) <input asp-for="Bhamc.Q101_2" />
-                @Html.DisplayNameFor(model => model.Bhamc.Q101_3) <input asp-for="Bhamc.Q101_3" />
-
-            </div>*@
-            <div class="col-md-12 text-primary">
-                <p>Q100. Vaginal secretion (tick where appropriate)</p>
-                <p class="text-info">4.Consistency </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q101_1)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q101_1" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q101_2)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q101_2" />
-                            </div>
-                            <div class="col-md-3">
-                                @Html.DisplayNameFor(model => model.Bhamc.Q101_3)
-                            </div>
-                            <div class="col-md-1">
-                                <input asp-for="Bhamc.Q101_3" />
-                            </div>
-
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-
-
-
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q102" class="control-label"></label>
-                <input asp-for="Bhamc.Q102" class="form-control" />
-                <span asp-validation-for="Bhamc.Q102" class="text-danger"></span>
-            </div>
-            <div class="col-md-3">
-                <label asp-for="Bhamc.Q103" class="control-label"></label>
-                <select asp-for="Bhamc.Q103" class="form-control"
-                        asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E103>()">
-                    <option selected="selected" value=""></option>
-                </select>
-                <span asp-validation-for="Bhamc.Q103" class="text-danger"></span>
-            </div>
+    <div class="row jumbodm">
+        <div class="col-md-12 text-info">
+            <h5>INFANT FEEDING INFORMATION</h5>
         </div>
+        <div class="col-md-5">
+            <label asp-for="Bhamc.Q80" class="control-label"></label>
+            <select asp-for="Bhamc.Q80" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q80" class="text-danger"></span>
+        </div>
+        @*<div class="col-md-7">
+            <p>Q81. If Yes, what kind of counselling did you receive</p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q81_1) <input asp-for="Bhamc.Q81_1" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q81_2) <input asp-for="Bhamc.Q81_2" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q81_3) <input asp-for="Bhamc.Q81_3" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q81_4) <input asp-for="Bhamc.Q81_4" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q81_5) <input asp-for="Bhamc.Q81_5" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q81_6) <input asp-for="Bhamc.Q81_6" />
+
+
+        </div>*@
+        <div class="col-md-6">
+            <p>Q81. If Yes, what kind of counselling did you receive</p>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="row">
+                        <div class="col-md-6">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q81_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q81_1" />
+                        </div>
+                        <div class="col-md-4">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q81_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q81_2" />
+                        </div>
+                        <div class="col-md-6">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q81_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q81_3" />
+                        </div>
+                        <div class="col-md-4">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q81_4)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q81_4" />
+                        </div>
+                        <div class="col-md-6">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q81_5)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q81_5" />
+                        </div>
+                        <div class="col-md-4">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q81_6)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q81_6" />
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-7">
+            <p>Q82. Where else have you heard about breast feeding and infant feeding?</p>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="row">
+                        <div class="col-md-5">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q82_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q82_1" />
+                        </div>
+                        <div class="col-md-5">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q82_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q82_2" />
+                        </div>
+                        <div class="col-md-5">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q82_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q82_3" />
+                        </div>
+                        <div class="col-md-5">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q82_4)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q82_4" />
+                        </div>
+                        <div class="col-md-5">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q82_5)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q82_5" />
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="col-md-5">
+            <label asp-for="Bhamc.Q83" class="control-label"></label>
+            <select asp-for="Bhamc.Q83" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E83>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q83" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Bhamc.Q84" class="control-label"></label>
+            <select asp-for="Bhamc.Q84" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E84>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q84" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Bhamc.Q85" class="control-label"></label>
+            <select asp-for="Bhamc.Q85" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E85>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q85" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-5">
+            <label asp-for="Bhamc.Q86" class="control-label"></label>
+            <select asp-for="Bhamc.Q86" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E85>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q86" class="text-danger"></span>
+        </div>
+       
+        <div class="col-md-6">
+            <label asp-for="Bhamc.Q87" class="control-label"></label>
+            <select asp-for="Bhamc.Q87" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E87>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q87" class="text-danger"></span>
+        </div>
+       
+        <div class="col-md-6">
+            <label asp-for="Bhamc.Q88" class="control-label"></label>
+            <select asp-for="Bhamc.Q88" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q88" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Bhamc.Q89" class="control-label"></label>
+            <select asp-for="Bhamc.Q89" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q89" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="Bhamc.Q90" class="control-label"></label>
+            <select asp-for="Bhamc.Q90" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E90>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q90" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 collapse" id="nOthersQ90">
+            <label asp-for="Bhamc.OthersQ90" class="control-label"></label>
+            <input asp-for="Bhamc.OthersQ90" class="form-control" />
+            <span asp-validation-for="Bhamc.OthersQ90" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Bhamc.Q91" class="control-label"></label>
+            <select asp-for="Bhamc.Q91" id="nQ91" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q91" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 collapse" id="nQ92">
+            <label asp-for="Bhamc.Q92" class="control-label"></label>
+            <select asp-for="Bhamc.Q92" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E92>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q92" class="text-danger"></span>
+        </div>
+        <div class="col-md-3 collapse"  id="nOthersQ92">
+            <label asp-for="Bhamc.OthersQ92" class="control-label"></label>
+            <input asp-for="Bhamc.OthersQ92" class="form-control" />
+            <span asp-validation-for="Bhamc.OthersQ92" class="text-danger"></span>
+        </div>
+        <div class="col-md-2 collapse" id="nQ93">
+            <label asp-for="Bhamc.Q93" class="control-label"></label>
+            <select asp-for="Bhamc.Q93" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E93>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q93" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Bhamc.Q94" class="control-label"></label>
+            <select asp-for="Bhamc.Q94" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E94>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q94" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Bhamc.Q95" class="control-label"></label>
+            <select asp-for="Bhamc.Q95" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E95>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q95" class="text-danger"></span>
+        </div>
+        <div class="col-md-7">
+            <label asp-for="Bhamc.Q96" class="control-label"></label>
+            <input asp-for="Bhamc.Q96" class="form-control" />
+            <span asp-validation-for="Bhamc.Q96" class="text-danger"></span>
+        </div>
+        <div class="col-md-5">
+            <label asp-for="Bhamc.Q97" class="control-label"></label>
+            @*<input asp-for="Bhamc.Q97" class="form-control" />*@
+            <select asp-for="Bhamc.Q97" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q97" class="text-danger"></span>
+        </div>
+        @*<div class="col-md-12">
+            <p>Q98. External genitalia (tick where appropriate)</p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q98_1) <input asp-for="Bhamc.Q98_1" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q98_2) <input asp-for="Bhamc.Q98_2" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q98_4) <input asp-for="Bhamc.Q98_4" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q98_5) <input asp-for="Bhamc.Q98_5" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q98_6) <input asp-for="Bhamc.Q98_6" />
+
+
+
+        </div>*@
+        <div class="col-md-8">
+            <p>Q98. External genitalia (tick where appropriate)</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q98_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q98_1" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q98_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q98_2" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q98_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q98_3" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q98_4)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q98_4" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q98_5)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q98_5" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q98_5)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q98_6" />
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        @*<div class="col-md-12">
+            <p>Q99. Internal genitalia (tick where appropriate)</p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q99_1) <input asp-for="Bhamc.Q99_1" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q99_2) <input asp-for="Bhamc.Q99_2" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q99_4) <input asp-for="Bhamc.Q99_4" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q99_5) <input asp-for="Bhamc.Q99_5" />
+        </div>*@
+        <div class="col-md-8">
+            <p>Q99. Internal genitalia (tick where appropriate)</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q99_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q99_1" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q99_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q99_2" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q99_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q99_3" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q99_4)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q99_4" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q99_5)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q99_5" />
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="col-md-12">
+            <p>Q100. Vaginal secretion (tick where appropriate)</p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_1_1) <input asp-for="Bhamc.Q100_1_1" />
+        </div>
+        @*<div class="col-md-12">
+            <p>1.Normal</p>
+            <input asp-for="Bhamc.Q100_1_1" />
+            Html.DisplayNameFor(model => model.Bhamc.Q100_1_1) <input asp-for="Bhamc.Q100_1_1" />
+        </div>*@
+        @*<div class="col-md-12">
+            <p>2.Amount</p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_2_1) <input asp-for="Bhamc.Q100_2_1" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_2_2) <input asp-for="Bhamc.Q100_2_2" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_2_3) <input asp-for="Bhamc.Q100_2_3" />
+        </div>*@
+
+        <div class="col-md-6">
+            <p>Q100. Vaginal secretion (tick where appropriate)</p>
+            <p class="text-info">2.Amount</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_2_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_2_1" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_2_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_2_2" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_2_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_2_3" />
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        @*<div class="col-md-12">
+            <p>3.Colour </p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_1) <input asp-for="Bhamc.Q100_3_1" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_1) <input asp-for="Bhamc.Q100_3_1" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_2) <input asp-for="Bhamc.Q100_3_2" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_3) <input asp-for="Bhamc.Q100_3_3" />
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_4) <input asp-for="Bhamc.Q100_3_4" />
+
+        </div>*@
+        <div class="col-md-12">
+            <p>Q100. Vaginal secretion (tick where appropriate)</p>
+            <p class="text-info">3.Colour </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_3_1" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_3_2" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_3_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_3_3" />
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-12">
+            <p>Q100. Vaginal secretion (tick where appropriate)</p>
+            <p class="text-info">4.Consistency </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_4_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_4_1" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_4_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_4_2" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_4_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_4_3" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_4_4)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_4_4" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q100_4_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q100_4_5" />
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        @*<div class="col-md-12">
+            <p>Q100. Vaginal secretion (tick where appropriate)</p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_5_1) <input asp-for="Bhamc.Q100_5_1" />
+        </div>*@
+        <div class="col-md-3">
+            <label asp-for="Bhamc.Q100_5_1" class="control-label"></label>
+            <select asp-for="Bhamc.Q100_5_1" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q100_5_1" class="text-danger"></span>
+        </div>
+
+        @*<div class="col-md-12">
+            <p>Q100. Vaginal secretion (tick where appropriate)</p>
+            @Html.DisplayNameFor(model => model.Bhamc.Q100_6_1) <input asp-for="Bhamc.Q100_6_1" />
+        </div>*@
+        <div class="col-md-2">
+            <label asp-for="Bhamc.Q100_6_1" class="control-label"></label>
+            <select asp-for="Bhamc.Q100_6_1" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E9>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q100_6_1" class="text-danger"></span>
+        </div>
+
+
+        <div class="col-md-12">
+            <p>Q100. Vaginal secretion (tick where appropriate)</p>
+            <p class="text-info">4.Consistency </p>
+            <p>Sample taken</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q101_1)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q101_1" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q101_2)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q101_2" />
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayNameFor(model => model.Bhamc.Q101_3)
+                        </div>
+                        <div class="col-md-1">
+                            <input asp-for="Bhamc.Q101_3" />
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
 
         <div class="col-md-3">
-            <input type="submit" value="Create" class="btn btn-primary" />
+            <label asp-for="Bhamc.Q102" class="control-label"></label>
+            <input asp-for="Bhamc.Q102" class="form-control" />
+            <span asp-validation-for="Bhamc.Q102" class="text-danger"></span>
         </div>
+        <div class="col-md-3">
+            <label asp-for="Bhamc.Q103" class="control-label"></label>
+            <select asp-for="Bhamc.Q103" class="form-control"
+                    asp-items="Html.GetEnumSelectList<BHMapp.Models.Bhamc.E103>()">
+                <option selected="selected" value=""></option>
+            </select>
+            <span asp-validation-for="Bhamc.Q103" class="text-danger"></span>
+        </div>
+    </div>
+
+        @*<div class="col-md-3 ">
+            <input type="submit" value="Create" class="btn btn-bh" />
+        </div>*@
+        <div class="col-md-12">
+           
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <input type="submit" value="Save" class="btn btn-bh" />
+                        </div>
+                        <div class="col-md-3">
+                            @*<input type="submit" value="Create" class="btn btn-bh" />*@
+                            <a asp-action="Create" class="btn btn-bh">Cancel</a>
+                        </div>
+                       
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
     </div>
 </form>
     @*</div>*@
 @*</div>*@
 
-<div>
-    <a asp-page="Index">Back to List</a>
+<div class="row justify-content-center">
+    <a class="text-info"  asp-page="Index">Back to List</a>
 </div>
 
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script type="text/javascript">
+
+    document.getElementById('nname').focus();
+
+    $(document).on("change", "#nQ3", function () {
+        if ($(this).val() == '4') {
+
+            $("#nOthersQ3").removeClass('collapse');
+            $("#nOthersQ3").addClass('text-info');
+        }
+        else {
+            $("#nOthersQ3").addClass('collapse');
+            $("#nOthersQ3").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ4", function () {
+        if ($(this).val() == '4') {
+
+            $("#nOthersQ4").removeClass('collapse');
+            $("#nOthersQ4").addClass('text-info');
+        }
+        else {
+            $("#nOthersQ4").addClass('collapse');
+            $("#nOthersQ4").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ5", function () {
+        if ($(this).val() == '3' || $(this).val() == '4' || $(this).val() == '5'){
+
+            $("#nQ6").addClass('collapse');
+            $("#nQ7").addClass('collapse');
+            
+        }
+        else {
+            
+            $("#nQ6").removeClass('collapse');
+            $("#nQ7").removeClass('collapse');
+        }
+    });
+    $(document).on("change", "#nQ10", function () {
+        if ($(this).val() == '6') {
+
+            $("#nOthersQ10").removeClass('collapse');
+            $("#nOthersQ10").addClass('text-info');
+        }
+        else {
+            $("#nOthersQ10").addClass('collapse');
+            $("#nOthersQ10").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ13", function () {
+        if ($(this).val() == '1') {
+
+            $("#nQ14").addClass('collapse');
+            
+
+        }
+        else {
+
+            $("#nQ14").removeClass('collapse');
+            
+        }
+        
+    });
+    $(document).on("change", "#nQ13", function () {
+       
+        if ($(this).val() == '5') {
+
+            $("#nOthersQ13").removeClass('collapse');
+            $("#nOthersQ13").addClass('text-info');
+            $("#nQ14").addClass('collapse');
+        }
+        else {
+
+            $("#nOthersQ13").addClass('collapse');
+            $("#nOthersQ13").removeClass('text-info');
+            $("#nQ14").removeClass('collapse');
+        }
+    });
+    $(document).on("change", "#nQ15", function () {
+        if ($(this).val() == '4') {
+
+            $("#nOthersQ15").removeClass('collapse');
+            $("#nOthersQ15").addClass('text-info');
+        }
+        else {
+            $("#nOthersQ15").addClass('collapse');
+            $("#nOthersQ15").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ18", function () {
+        if ($(this).val() == '5') {
+
+            $("#nOthersQ18").removeClass('collapse');
+            $("#nOthersQ18").addClass('text-info');
+        }
+        else {
+            $("#nOthersQ18").addClass('collapse');
+            $("#nOthersQ18").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ20", function () {
+        if ($(this).val() == '4') {
+
+            $("#nOthersQ20").removeClass('collapse');
+            $("#nOthersQ20").addClass('text-info');
+        }
+        else {
+            $("#nOthersQ20").addClass('collapse');
+            $("#nOthersQ20").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ21", function () {
+        if ($(this).val() == '1') {
+
+          
+            $("#nQ22").addClass('collapse');
+        }
+        else {
+         
+            $("#nQ22").removeClass('collapse');
+        }
+    });
+    $(document).ready(function () {
+            $('#nQ22').click(function () {
+                if ($(this).prop("checked") == true) {
+                    $("#nOthersQ22_4").removeClass("collapse");
+
+                }
+                else if ($(this).prop("checked") == false) {
+
+                    $("#nOthersQ22_4").addClass("collapse");
+
+                }
+            });
+    });
+    $(document).on("change", "#nQ24", function () {
+
+        if ($(this).val() <= 15) {
+
+
+            $('#nQ25').addClass('collapse');
+            $('#nQ26').addClass('collapse');
+            $('#nQ27').addClass('collapse');
+            $('#nQ28').addClass('collapse');
+            $('#nQ29').addClass('collapse');
+            $('#nQ30').addClass('collapse');
+            $('#nQ31').addClass('collapse');
+            $('#nQ32').addClass('collapse');
+            $('#nQ45').addClass('collapse');
+            $('#nQ46').addClass('collapse');
+           
+        }
+        else {
+            $('#nQ25').removeClass('collapse');
+            $('#nQ26').removeClass('collapse');
+            $('#nQ27').removeClass('collapse');
+            $('#nQ28').removeClass('collapse');
+            $('#nQ29').removeClass('collapse');
+            $('#nQ30').removeClass('collapse');
+            $('#nQ31').removeClass('collapse');
+            $('#nQ32').removeClass('collapse');
+            $('#nQ45').removeClass('collapse');
+            $('#nQ46').removeClass('collapse');
+
+        }
+    });
+
+    $(document).on("change", "#nQ33", function () {
+        if ($(this).val() == '0') {
+
+
+
+            $('#nQ34').addClass('collapse');
+            $('#nQ35').addClass('collapse');
+            $('#nOthersQ35').addClass('collapse');
+            $('#nQ36').addClass('collapse');
+            $('#nOthersQ36').addClass('collapse');
+            $('#nQ37').addClass('collapse');
+            
+        }
+        else {
+
+
+            $('#nQ34').removeClass('collapse');
+            $('#nQ35').removeClass('collapse');
+            $('#nOthersQ35').removeClass('collapse');
+            $('#nQ36').removeClass('collapse');
+            $('#nOthersQ36').removeClass('collapse');
+            $('#nQ37').removeClass('collapse');
+        }
+    });
+
+    $(document).on("change", "#nnQ35", function () {
+        if ($(this).val() == '4') {
+           
+            $('#nOthersQ35').removeClass('collapse');
+            $("#nOthersQ35").addClass('text-info');
+                 }
+        else {
+
+          
+            $('#nOthersQ35').addClass('collapse');
+            $("#nOthersQ35").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nnQ36", function () {
+        if ($(this).val() == '4') {
+            
+            $('#nOthersQ36').removeClass('collapse');
+            $("#nOthersQ36").addClass('text-info');
+        }
+        else {
+          
+            $('#nOthersQ36').addClass('collapse');
+            $("#nOthersQ36").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ60", function () {
+        if ($(this).val() == '1') {
+
+            $('#nQ60_1').removeClass('collapse');
+            $("#nQ60_1").addClass('text-info');
+            $('#nQ60_2').removeClass('collapse');
+            $("#nQ60_2").addClass('text-info');
+            $('#nQ60_3').removeClass('collapse');
+            $("#nQ60_3").addClass('text-info');
+        }
+        else {
+
+            $('#nQ60_1').addClass('collapse');
+            $("#nQ60_1").removeClass('text-info');
+            $('#nQ60_2').addClass('collapse');
+            $("#nQ60_2").removeClass('text-info');
+            $('#nQ60_3').addClass('collapse');
+            $("#nQ60_3").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ67", function () {
+        if ($(this).val() == '6') {
+
+            $('#nOthersQ67').removeClass('collapse');
+            $("#nOthersQ67").addClass('text-info');
+        }
+        else {
+
+            $('#nOthersQ67').addClass('collapse');
+            $("#nOthersQ67").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ68", function () {
+        if ($(this).val() == '1') {
+
+            $('#nQ68Yes').removeClass('collapse');
+            $("#nQ68Yes").addClass('text-info');
+        }
+        else {
+
+            $('#nQ68Yes').addClass('collapse');
+            $("#nQ68Yes").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ71", function () {
+        if ($(this).val() == '1') {
+
+            $('#nQ71_1').removeClass('collapse');
+            $("#nQ71_1").addClass('text-info');
+        }
+        else {
+
+            $('#nQ71_1').addClass('collapse');
+            $("#nQ71_1").removeClass('text-info');
+        }
+    });
+    $(document).on("change", "#nQ62", function () {
+        if ($(this).val() == '1') {
+
+            $('#nQ63').addClass('collapse');
+            $("#nQ63").addClass('text-info');
+        }
+        else {
+
+            $('#nQ63').removeClass('collapse');
+            $("#nQ63").removeClass('text-info');
+        }
+    });
+
+    $(document).on("change", "#nQ91", function () {
+        if ($(this).val() == '0') {
+
+            $('#nQ92').removeClass('collapse');
+            $("#nQ92").addClass('text-info');
+
+            $('#nQ93').addClass('collapse');
+            $("#nQ93").removeClass('text-info');
+        }
+        else {
+
+            $('#nQ92').addClass('collapse');
+            $("#nQ92").removeClass('text-info');
+
+            $('#nQ93').removeClass('collapse');
+            $("#nQ93").addClass('text-info');
+        }
+    });
+</script>
 }
